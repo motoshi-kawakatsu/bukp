@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+		<property name="locations">
+			<list>
+				<value>classpath:system.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- Controller bean scanner -->
+	<context:component-scan base-package="jp.co.broadleaf.breg" use-default-filters="false">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+
+	<!-- Handles HTTP GET requests for /assets/** by efficiently serving up static resources in the ${webappRoot}/assets directory -->
+	<mvc:resources mapping="/js/**" location="/assets/js/" order="-1" />
+	<mvc:resources mapping="/css/**" location="/assets/css/" order="-1" />
+	<mvc:resources mapping="/fonts/**" location="/assets/fonts/" order="-1" />
+	<mvc:resources mapping="/imgs/**" location="/assets/imgs/" order="-1" />
+	<mvc:resources mapping="/lib/**" location="/assets/lib/" order="-1" />
+	<mvc:resources mapping="/favicon.ico" location="/assets/favicon.ico" order="-1" />
+
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<mvc:annotation-driven>
+		<mvc:path-matching suffix-pattern="true" trailing-slash="false" registered-suffixes-only="true" />
+	</mvc:annotation-driven>
+
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+		<property name="contentType" value="UTF-8" />
+	</bean>
+	
+	<bean id="loginResolver" class="jp.co.broadleaf.breg.account.security.BroadleafLoginResolver" />
+
+	<mvc:interceptors>
+		<bean class="jp.co.broadleaf.framework.web.interceptor.BaseUrlInterceptor">
+			<property name="baseurl" value="${system.baseurl}" />
+		</bean>
+		<bean class="jp.co.broadleaf.common.web.interceptor.BroadleafSubmissionInterceptor" />
+		
+		<bean class="jp.co.broadleaf.framework.web.interceptor.SecurityInterceptor">
+			<property name="loginResolver" ref="loginResolver" />
+			<property name="principalSessionKey" value="#{loginResolver.principalSessionKey}" />
+		</bean>
+	</mvc:interceptors>
+
+	<bean class="jp.co.broadleaf.common.web.handler.BroadleafExceptionHandler">
+		<property name="customMessageResolver" ref="messageResolver" />
+		<property name="systemErrorViewName" value="system_error" />
+		<property name="systemErrorMessageCode" value="E19999" />
+		<property name="concurrencyErrorMessageCode" value="E00005" />
+		<property name="businessErrorViewName" value="system_error" />
+	</bean>
+
+	<!-- RedisHttpSession -->
+	<context:annotation-config>
+		<context:component-scan base-package="org.springframework.session.data.redis.config.annotation.web.http" />
+	</context:annotation-config>
+	<bean class="org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration" />
+
+</beans>

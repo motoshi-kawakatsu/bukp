@@ -1,0 +1,213 @@
+@charset "UTF-8";
+/**
+ *　結合
+ *
+ * create : 2017/01/09
+ */
+html { 
+	overflow-x: hidden; 
+	overflow-y: auto;
+ }
+ 
+.panel-body .set-cd,
+.panel-body .shubestsu-cd,
+.panel-body .del-distinction,
+.panel-body .classify-cd,
+.panel-body .apply-status,
+.panel-body .bl-cd,
+.panel-body .jyunse-hinban,
+.panel-body .car-cd,
+.panel-body .shori-kubun,
+.panel-body .sizenormal,
+.panel-body .size
+{
+  width: 35%;
+  min-width: 35%;;
+}
+.panel-body .apply-date,
+.panel-body .insert-date,
+.panel-body .yuryo-hinban,
+.panel-body .error-distinction,
+.panel-body .update-date{
+  width: 30%;
+  min-width: 30%;
+}
+
+.glyphicon{
+  top: 0px;
+}
+
+.page{
+  width: 130px;
+  height: 20px;
+  color:#4682B4;
+  border:none;
+  background: #E6FBDB;
+}
+
+
+.sort .input-group-addon {
+    width: 100px;
+    min-width: 85px;
+}
+
+.input-group .column1{
+  min-width: 130px;
+}
+.input-group .column2{
+  min-width: 130px;
+} 
+
+.input-group .column3{
+  min-width: 120px;
+}
+
+ .empty-line{
+	 flex: 1;
+ }
+ 
+ .panel-body .empty {
+	width:20%;
+	min-width:0%;
+}
+
+/*batch-apply*/
+
+.bl-btn-3 {
+  width: 70px;
+}
+
+.bl-btn-4 {
+  width: 110px;
+}
+.bl-btn-10 {
+  width: 210px;
+}
+
+.bl-btn-5 {
+  width: 130px;
+}
+
+.d-cell {
+  background: #CCCCCC !important;
+}
+
+.grid-top-group-button .group-button .btn,
+.grid-bottom .btn {
+    margin-right: 0px !important;
+}
+
+.grid-top-group-button .group-button{
+    margin-bottom:6px;
+    margin-top:6px;
+}
+
+.grid-top-group-button{
+    justify-content: space-between;
+}
+
+.ui-tooltip,
+.arrow:after {
+  background-color: red;
+  border: 2px solid white;
+}
+
+.ui-tooltip {
+  padding: 10px 20px;
+  color: white;
+  border-radius: 20px;
+  font: bold 14px "Helvetica Neue", Sans-Serif;
+  text-transform: uppercase;
+  box-shadow: 0 0 7px black;
+}
+
+.arrow {
+  width: 70px;
+  height: 16px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -35px;
+  bottom: -16px;
+}
+
+.arrow.top {
+  top: -16px;
+  bottom: auto;
+}
+
+.arrow.left {
+  left: 20%;
+}
+
+.arrow:after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: -20px;
+  width: 25px;
+  height: 25px;
+  box-shadow: 6px 5px 9px -9px black;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  tranform: rotate(45deg);
+}
+
+.group-button{
+float:right;
+}
+
+.page_head {
+	display: flex;
+}
+
+.page-info{
+	position: absolute;
+	right:0;
+}
+
+.page-box{
+	margin-left:50%;
+	margin-right:5%;
+}
+.page-box a,.page-box span{
+	margin-left:15px;
+}
+
+.arrow.top:after {
+  bottom: -20px;
+  top: auto;
+}
+
+.empty-inline {
+    flex: 1;
+}
+
+.marked{
+	background-color:red !important;
+	color:blue;
+}
+
+.grid-top{
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+#grid {
+  width: 100%;
+  height: 100%;
+}
+
+.grid-top-group-button .group-button .btn {
+  margin-right: 0 !important;
+}
+
+.grid-top-group-button .group-button {
+  margin-bottom: 2px;
+  /*margin-top:6px;*/
+}
+
+.grid-top-group-button {
+  justify-content: space-between;
+}

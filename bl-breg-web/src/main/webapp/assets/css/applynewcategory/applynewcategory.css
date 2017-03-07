@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/* CSS Document */
+h2 {
+  font-family:"ＭＳ ゴシック", "MS Gothic", "メイリオ", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif, "Glyphicons Halflings";
+}
+.input-group {
+  padding-top: 15px;
+  text-align: left;
+  vertical-align: middle;
+  width:45%;
+  font-family:"ＭＳ ゴシック", "MS Gothic", "メイリオ", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif, "Glyphicons Halflings";
+}
+.input-group-textarea {
+  padding-top: 15px;
+  text-align: left;
+  vertical-align: middle;
+  display: block;
+  width: 100%;
+}
+.input-row{
+  display: table-cell;
+  padding: 6px 12px;
+  vertical-align: top;
+  text-align: left;
+  width: 150px;
+  min-width: 150px;
+}
+.group-button{
+  margin-top: 3%;
+  padding-top: 5px;
+  width: 100%;
+  min-height: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.input-hight{
+  max-height: 40px;
+  min-height: 40px;
+}
+.form-control:disabled {
+  background-color: #FFFFAA;
+}
+div.textareared {
+  width: 100%;
+  border: 2px solid #f4a2a2;
+  background-color: #ffeeee;
+  padding: 10px !important;
+  margin: 0 0 10px 0;
+  text-align: left;
+  font-size: 13px;
+}
+div.textareared ul {
+  padding: 0;
+  margin: 0 !important;
+  list-style-position: inside;
+}
+div.textareared ul li.icon {
+  text-align: center !important;
+  list-style: none !important;
+  padding: 0 0 5px 0 !important;
+}
+span.red {
+  color: #FF0000;
+}
+textarea.form-control {
+  height: 260px;
+  width: calc(100% - 150px) !important;
+  position: absolute !important;
+  left: 150px;
+}
+.input-group label .input-group-addon {
+  height: 260px;
+  float: left !important;
+  width: 150px !important;
+  line-height: 230px;
+}
+label img {
+  display: block !important;
+  margin-top: 270px;
+} 
+textarea {
+  resize: none;
+  font-weight: normal;
+  font-family:"ＭＳ ゴシック", "MS Gothic", "メイリオ", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif, "Glyphicons Halflings";
+}
+input {
+  font-family:"ＭＳ ゴシック", "MS Gothic", "メイリオ", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif, "Glyphicons Halflings";
+}
+btn {
+  font-family:"ＭＳ ゴシック", "MS Gothic", "メイリオ", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif, "Glyphicons Halflings";
+}
+form {
+  margin:0 auto;
+  width: 60%;
+}

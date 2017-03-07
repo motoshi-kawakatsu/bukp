@@ -1,0 +1,104 @@
+@CHARSET "UTF-8";
+
+
+/*overwrite in common*/
+.panel-body .input-group {
+
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.input-group .input-group-addon {
+  width: 100px;
+  min-width: 85px;
+}
+.row{
+	margin-top: 20px;
+}
+
+.required-title{
+	margin-top: 10px;
+	font-size: 10px;
+}
+
+.title {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 10px;
+}
+
+.panel-body .maker-cd,
+.panel-body .bl-cd,
+.panel-body .car-maker-cd,
+.panel-body .select-cd,
+.panel-body .classify-cd,
+.panel-body .set-father-no,
+.panel-body .product-name,
+.panel-body .shuri-kubun,
+.panel-body .create-date,
+.panel-body .update-date,
+.panel-body .app-order,
+.panel-body .apply-kubun
+{
+  width: 33%;
+  min-width: 217px;
+}
+
+
+.glyphicon{
+  top: 0px;
+}
+
+.input-group .guide {
+  display: table-cell;
+}
+
+
+.input-group .column1{
+  min-width: 160px;
+}
+.input-group .column2{
+  min-width: 100px;
+}
+.input-group .column3{
+  min-width: 160px;
+}
+
+
+
+/*div space*/
+
+.panel-body .full-line {
+  width: 100%;
+  min-width: 0%;
+}
+
+.hidden-mode{
+	display: none;
+}
+
+/*button */
+.group-button{
+  padding-bottom :15px;
+}
+.bl-btn-3 {
+  width: 70px;
+}
+
+.bl-btn-4 {
+  width: 90px;
+}
+.bl-btn-5 {
+  width: 130px;
+}
+.bl-btn-10 {
+  width: 210px;
+}
+
+.d-cell {
+    background: #CCCCCC !important;
+}
+.input-group{
+	padding-top:5px !important;
+	padding-bottom:5px !important;
+	padding-right:15px !important;
+}

@@ -1,0 +1,58 @@
+.input-readonly{
+	background-color: #FFFFAA;
+}
+
+.input-group {
+	width: 100%;
+}
+
+.input-group .input-group-addon {
+	width: 120px;
+	min-width: 120px;
+}
+
+.container {
+	padding: 0 100px;
+}
+
+.container-center {
+	justify-content: center;
+}
+
+.item-label {
+	display: flex;
+	-webkit-flex-direction: row;
+}
+
+span.header {
+	padding: 6px 12px;
+	background: #009240;
+	font-size: 11pt;
+	color: white;
+}
+
+.select-list {
+	margin: 0 auto;
+	width: 100%;
+	max-height: 230px;
+	/*height:100%;*/
+	overflow-y: auto;
+	border: 1px solid;
+}
+
+.selected-item {
+	background: #B2DAA2;
+}
+
+a.selected-item:hover {
+	background: #B2DAA2;
+}
+
+.button-group{
+	padding-top: 5%;
+}
+
+.bl-btn-panel{
+	margin-left: 5px;
+	margin-right: 5px;
+}

@@ -1,0 +1,42 @@
+
+.first-column,
+.second-column
+{
+  width:50%;
+}
+.first-column .input-group-addon {
+    width: 120px;
+    min-width: 120px;
+}
+.second-column .input-group-addon {
+    width: 120px;
+    min-width: 120px;
+}
+.container-center{
+    justify-content: center;
+}
+
+
+.item-label {
+  display: flex;
+  -webkit-flex-direction: row;
+}
+span.header{
+    padding:6px 12px;
+    background: #009240;
+    font-size: 11pt;
+    color: white;
+
+}
+
+.output {
+  text-align: center;
+}
+
+.output button {
+  margin-top: 4px;
+}
+
+.select_group {
+  padding-top: 50px;
+}

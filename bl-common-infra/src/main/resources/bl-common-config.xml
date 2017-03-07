@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+	<!-- EntityManagerResolver -->
+	<bean id="entityManagerResolver" class="jp.co.broadleaf.common.domain.entity.BroadleafEntityManagerResolver">
+		
+		<property name="rdbEntityManager" ref="rdbEntityManager" />
+	</bean>
+
+	<!-- GeneServiceImpl -->
+	<bean id="geneService" class="jp.co.broadleaf.common.impl.GeneServiceImpl">
+		<property name="beanFactory" ref="beanFactory" />
+	</bean>
+	
+	<!-- MessageResolver -->
+	<bean id="messageResolver" class="jp.co.broadleaf.common.message.impl.MessageResolverImpl">
+		<property name="redisTemplate" ref="redisTemplate" />
+		<property name="jdbcDomainEntityManager" ref="rdbEntityManager" />
+	</bean>
+
+	<!-- PropertyResolver -->
+	<bean id="propertyResolver" class="jp.co.broadleaf.common.property.impl.PropertyResolverImpl">
+		<property name="redisTemplate" ref="redisTemplate" />
+		<property name="jdbcDomainEntityManager" ref="rdbEntityManager" />
+	</bean>
+
+    <!-- PropertyFacade -->
+	<bean id="propertyFacade" class="jp.co.broadleaf.common.property.impl.PropertyFacadeImpl">
+		<property name="propertyResolver" ref="propertyResolver" />
+	</bean>
+		
+	<!-- AOP bean  -->	
+	<bean id="rowDataLoggerImpl" class="jp.co.broadleaf.common.rowdata.impl.RowDataLoggerImpl" />  
+
+	<aop:config proxy-target-class="true">
+		<!-- Aspect expression -->
+		<aop:pointcut expression="execution(public * jp.co.broadleaf..*Facade.*(..)) || 
+		execution(public * jp.co.broadleaf..*Service.*(..)) ||
+		within(jp.co.broadleaf..*Controller) ||
+		execution(public * jp.co.broadleaf..*Dao.*(..)))" id="pointcut"/>
+		<aop:aspect ref="rowDataLoggerImpl">
+		<aop:before method="beforeMethod" pointcut-ref="pointcut"/>
+		<aop:after method="afterMethod" pointcut-ref="pointcut"/>
+		<aop:after-returning method="afterReturningMethod" pointcut-ref="pointcut" returning="returnVal"/>
+		</aop:aspect>
+	</aop:config>
+	<!-- AspectJ -->
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+</beans>

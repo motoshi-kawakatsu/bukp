@@ -1,0 +1,3299 @@
+@charset "UTF-8";
+
+/**
+ * 画面共通インポート定義ファイル
+ *
+ * create : 2016/01/21
+ */
+
+
+/**
+ * システム共通変数定義ファイル
+ *
+ * create : 2016/03/02
+ */
+
+
+footer {
+	text-align: center;
+}
+.navbar.navbar-default {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 0;
+    margin-bottom: 0;
+    min-height: 50px;
+    width: 102%;
+    border-bottom: 1px solid #cccccc;
+}
+
+.bootstrap-datetimepicker-widget {
+    z-index: 4000;
+}
+
+.bootstrap-datetimepicker-widget table td span[data-year] {
+    width: 74px;
+}
+
+.bootstrap-datetimepicker-widget table thead tr:first-child th[title=""]:hover {
+    background: none;
+    cursor: auto;
+}
+
+.jp-calendar {
+    width: 0;
+    border: none;
+    padding: 0;
+}
+
+.jp-datetimepicker {
+    position: relative;
+    display: block;
+}
+
+.jp-datetimepicker .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+
+.jp-datetimepicker-btn {
+    margin-left: 6px;
+}
+
+.dropdown {
+    z-index: 8000;
+}
+
+.bl-flex-row {
+    display: flex;
+    flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+}
+
+.bl-flex-column {
+    display: flex;
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+}
+
+.bl-flex-item {
+    /* flex以外のプロパティは別途指定してください */
+    flex: 1 1 0px;
+}
+
+.bl-flex-item-none {
+    flex: 0 0 auto;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    margin: 0;
+    background-color: #FFFFFF;
+    font-family: "ＭＳ ゴシック", "MS Gothic", "メイリオ", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif, "Glyphicons Halflings";
+    font-size: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bl-base-layout-header {
+    min-width: 1275px;
+    border-bottom: 1px solid #B7B7B7;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+    position: relative;
+    z-index: 2000;
+    width: 100%;
+}
+
+.bl-base-layout-footer {
+    position: absolute;
+    z-index: 2000;
+    bottom: 0px;
+    width: 100%;
+    min-width: 1275px;
+    padding: 2px 0px;
+    background-color: transparent;
+    border-top: 1px solid #B7B7B7;
+}
+
+.bl-base-layout-main {
+    display: flex;
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    /* flex以外のプロパティは別途指定してください */
+    flex: 1 1 0px;
+    background-color: #d5d5d5;
+    position: relative;
+    z-index: 0;
+    overflow-y: auto;
+}
+
+.bl-base-layout-contents {
+    display: flex;
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    /* flex以外のプロパティは別途指定してください */
+    flex: 1 1 0px;
+    min-width: 1275px;
+    margin: 0 auto;
+    color: #333333;
+}
+
+#bl-notify {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #FFFFFF;
+    border-radius: 4px;
+    z-index: 5000;
+    padding: 10px;
+}
+
+#bl-notify.blink {
+    -webkit-animation: blink 1s ease-in-out -1s infinite alternate;
+    -moz-animation: blink 1s ease-in-out -1s infinite alternate;
+    -ms-animation: blink 1s ease-in-out -1s infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#bl-notify.line-edit-notify {
+    left: 20px;
+    right: auto;
+}
+
+
+/**
+ * 共通部品インポート定義ファイル
+ *
+ * create : 2016/01/21
+ */
+
+
+/*------------------------------------------------------------------------------
+  レイアウト
+------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------
+  共通部品
+------------------------------------------------------------------------------*/
+
+
+/**
+ * 【共通部品】ボタンスタイル定義
+ * button.less
+ *
+ * create : 2016/01/21
+ */
+
+
+/*------------------------------------------------------------------------------
+  標準ボタン
+------------------------------------------------------------------------------*/
+
+.bl-btn {
+    background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #CDCDCD 100%);
+    background-image: -o-linear-gradient(top, #FFFFFF 0%, #CDCDCD 100%);
+    background-image: linear-gradient(to bottom, #FFFFFF 0%, #CDCDCD 100%);
+    background-repeat: repeat-x;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffcdcdcd', GradientType=0);
+    border-color: #BABABA;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #212E33;
+    cursor: pointer;
+}
+
+.bl-btn:focus {
+    outline-color: #269BFF;
+}
+
+.bl-btn:hover,
+.bl-btn:focus {
+    background-image: -webkit-linear-gradient(top, #e6e6e6 0%, #c0c0c0 100%);
+    background-image: -o-linear-gradient(top, #e6e6e6 0%, #c0c0c0 100%);
+    background-image: linear-gradient(to bottom, #e6e6e6 0%, #c0c0c0 100%);
+    background-repeat: repeat-x;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffe6e6e6', endColorstr='#ffc0c0c0', GradientType=0);
+    border-color: #AAAAAA;
+    color: #333333;
+}
+
+.bl-btn.active,
+.bl-btn:active {
+    background: #c0c0c0;
+    border-color: #909090;
+    color: #333333;
+}
+
+.bl-btn.disabled,
+.bl-btn.disabled:hover,
+.bl-btn.disabled:focus,
+.bl-btn.disabled:active,
+.bl-btn[disabled],
+.bl-btn[disabled]:hover,
+.bl-btn[disabled]:focus,
+.bl-btn[disabled]:active {
+    background-image: -webkit-linear-gradient(top, #FAFAFA 0%, #EEEEEE 100%);
+    background-image: -o-linear-gradient(top, #FAFAFA 0%, #EEEEEE 100%);
+    background-image: linear-gradient(to bottom, #FAFAFA 0%, #EEEEEE 100%);
+    background-repeat: repeat-x;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#fffafafa', endColorstr='#ffeeeeee', GradientType=0);
+    border-color: #BABABA;
+    color: #777777;
+    opacity: 0.8;
+}
+
+
+/* リンクタイプボタン */
+
+.btn-link {
+    font-size: 12px;
+    margin: 10px auto;
+    text-decoration: underline;
+}
+
+.btn-link:hover {
+    text-decoration: none;
+}
+
+.btn-link.disabled,
+.btn-link.disabled:hover,
+.btn-link.disabled:focus,
+.btn-link.disabled:active,
+.btn-link[disabled],
+.btn-link[disabled]:hover,
+.btn-link[disabled]:focus,
+.btn-link[disabled]:active {
+    color: #777777;
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+
+/*------------------------------------------------------------------------------
+  アイコン付きボタン
+------------------------------------------------------------------------------*/
+
+.btn.left-icon,
+.btn.right-icon {
+    position: relative;
+}
+
+.btn.left-icon .glyphicon,
+.btn.right-icon .glyphicon {
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+}
+
+.btn.left-icon .glyphicon {
+    left: 10px;
+}
+
+.btn.right-icon .glyphicon {
+    right: 10px;
+}
+
+
+/*------------------------------------------------------------------------------
+  画像ボタン
+------------------------------------------------------------------------------*/
+
+.bl-btn-image {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent no-repeat;
+    cursor: pointer;
+}
+
+.bl-btn-image:hover,
+.bl-btn-image:focus {
+    background-color: rgba(10, 10, 10, 0.1);
+    color: #333333;
+}
+
+.bl-btn-image.active,
+.bl-btn-image:active {
+    background-color: rgba(10, 10, 10, 0.4);
+    color: #333333;
+}
+
+.bl-btn-image.disabled,
+.bl-btn-image.disabled:hover,
+.bl-btn-image.disabled:focus,
+.bl-btn-image.disabled:active,
+.bl-btn-image[disabled],
+.bl-btn-image[disabled]:hover,
+.bl-btn-image[disabled]:focus,
+.bl-btn-image[disabled]:active {
+    background-color: rgba(10, 10, 10, 0.3);
+    border-color: #BABABA;
+    color: #212E33;
+}
+
+
+/*------------------------------------------------------------------------------
+  パネルボタン
+------------------------------------------------------------------------------*/
+
+.bl-btn-panel {
+    margin: 0 auto;
+    color: #009240;
+    background-color: #FFFFFF;
+    border: 2px solid #009240;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    width: 250px;
+}
+
+.bl-btn-panel:hover {
+    color: #FFFFFF;
+    background-color: #009240;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.bl-btn-panel:focus {
+    color: #FFFFFF;
+    background-color: #009240;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.bl-btn-panel.active,
+.bl-btn-panel:active {
+    color: #FFFFFF;
+    background-color: #009240;
+}
+
+.bl-btn-panel.disabled,
+.bl-btn-panel.disabled:hover,
+.bl-btn-panel.disabled:focus,
+.bl-btn-panel.disabled:active,
+.bl-btn-panel[disabled],
+.bl-btn-panel[disabled]:hover,
+.bl-btn-panel[disabled]:focus,
+.bl-btn-panel[disabled]:active {
+    background-color: #FFFFFF;
+    border: 2px solid #777777;
+    color: #777777;
+}
+
+
+/*------------------------------------------------------------------------------
+  一括選択／解除ボタン
+------------------------------------------------------------------------------*/
+
+.bl-btn-select-all-area {
+    display: flex;
+    flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.bl-btn-select-all-area button:first-child {
+    margin-right: 15px;
+}
+
+
+/*------------------------------------------------------------------------------
+  ウィザード「次へ」ボタン
+------------------------------------------------------------------------------*/
+
+.bl-btn-wiz-next {
+    margin: 0 auto;
+    color: #009240;
+    background-color: #FFFFFF;
+    border: 2px solid #009240;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 250px;
+}
+
+.bl-btn-wiz-next:hover {
+    color: #FFFFFF;
+    background-color: #009240;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.bl-btn-wiz-next:focus {
+    color: #FFFFFF;
+    background-color: #009240;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.bl-btn-wiz-next.active,
+.bl-btn-wiz-next:active {
+    color: #FFFFFF;
+    background-color: #009240;
+}
+
+.bl-btn-wiz-next.disabled,
+.bl-btn-wiz-next.disabled:hover,
+.bl-btn-wiz-next.disabled:focus,
+.bl-btn-wiz-next.disabled:active,
+.bl-btn-wiz-next[disabled],
+.bl-btn-wiz-next[disabled]:hover,
+.bl-btn-wiz-next[disabled]:focus,
+.bl-btn-wiz-next[disabled]:active {
+    background-color: #FFFFFF;
+    border: 2px solid #777777;
+    color: #777777;
+}
+
+.bl-btn-wiz-next .glyphicon {
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+}
+
+.bl-btn-wiz-next .glyphicon {
+    right: 10px;
+}
+
+.bl-btn-wiz-prev {
+    margin: 0 auto;
+    color: #009240;
+    background-color: #FFFFFF;
+    border: 2px solid #009240;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    position: relative;
+}
+
+.bl-btn-wiz-prev:hover {
+    color: #FFFFFF;
+    background-color: #009240;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.bl-btn-wiz-prev:focus {
+    color: #FFFFFF;
+    background-color: #009240;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.bl-btn-wiz-prev.active,
+.bl-btn-wiz-prev:active {
+    color: #FFFFFF;
+    background-color: #009240;
+}
+
+.bl-btn-wiz-prev.disabled,
+.bl-btn-wiz-prev.disabled:hover,
+.bl-btn-wiz-prev.disabled:focus,
+.bl-btn-wiz-prev.disabled:active,
+.bl-btn-wiz-prev[disabled],
+.bl-btn-wiz-prev[disabled]:hover,
+.bl-btn-wiz-prev[disabled]:focus,
+.bl-btn-wiz-prev[disabled]:active {
+    background-color: #FFFFFF;
+    border: 2px solid #777777;
+    color: #777777;
+}
+
+.bl-btn-wiz-prev .glyphicon {
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+}
+
+.bl-btn-wiz-prev .glyphicon {
+    left: 10px;
+}
+
+
+/*------------------------------------------------------------------------------
+  簡易設定起動ボタン
+------------------------------------------------------------------------------*/
+
+.bl-btn-easy-setting {
+    margin: 0;
+    padding: 6px 0;
+    text-decoration: none;
+}
+
+.bl-btn-easy-setting:active,
+.bl-btn-easy-setting:focus {
+    text-decoration: none;
+}
+
+.bl-btn-easy-setting:after {
+    font-family: 'Glyphicons Halflings';
+    content: '\e019';
+    position: relative;
+    padding-left: 4px;
+    color: #000000;
+    top: 1px;
+}
+
+
+/*------------------------------------------------------------------------------
+  ステータス表示ボタン
+------------------------------------------------------------------------------*/
+
+.bl-btn-state {
+    background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #CDCDCD 100%);
+    background-image: -o-linear-gradient(top, #FFFFFF 0%, #CDCDCD 100%);
+    background-image: linear-gradient(to bottom, #FFFFFF 0%, #CDCDCD 100%);
+    background-repeat: repeat-x;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffcdcdcd', GradientType=0);
+    border-color: #BABABA;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #212E33;
+    cursor: pointer;
+    position: relative;
+    width: 80px;
+    height: 36px;
+    padding-top: 0;
+    padding-bottom: 6px;
+}
+
+.bl-btn-state:focus {
+    outline-color: #269BFF;
+}
+
+.bl-btn-state:hover,
+.bl-btn-state:focus {
+    background-image: -webkit-linear-gradient(top, #e6e6e6 0%, #c0c0c0 100%);
+    background-image: -o-linear-gradient(top, #e6e6e6 0%, #c0c0c0 100%);
+    background-image: linear-gradient(to bottom, #e6e6e6 0%, #c0c0c0 100%);
+    background-repeat: repeat-x;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffe6e6e6', endColorstr='#ffc0c0c0', GradientType=0);
+    border-color: #AAAAAA;
+    color: #333333;
+}
+
+.bl-btn-state.active,
+.bl-btn-state:active {
+    background: #c0c0c0;
+    border-color: #909090;
+    color: #333333;
+}
+
+.bl-btn-state.disabled,
+.bl-btn-state.disabled:hover,
+.bl-btn-state.disabled:focus,
+.bl-btn-state.disabled:active,
+.bl-btn-state[disabled],
+.bl-btn-state[disabled]:hover,
+.bl-btn-state[disabled]:focus,
+.bl-btn-state[disabled]:active {
+    background-image: -webkit-linear-gradient(top, #FAFAFA 0%, #EEEEEE 100%);
+    background-image: -o-linear-gradient(top, #FAFAFA 0%, #EEEEEE 100%);
+    background-image: linear-gradient(to bottom, #FAFAFA 0%, #EEEEEE 100%);
+    background-repeat: repeat-x;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#fffafafa', endColorstr='#ffeeeeee', GradientType=0);
+    border-color: #BABABA;
+    color: #777777;
+    opacity: 0.8;
+}
+
+.bl-btn-state:after {
+    position: absolute;
+    height: 4px;
+    width: 80%;
+    left: 10%;
+    content: "";
+    border: 1px solid #909090;
+    top: 26px;
+    border-radius: 5px;
+}
+
+.bl-btn-state.ok:after {
+    background: #009250;
+    border-color: #009250;
+}
+
+.bl-btn-state.error:after {
+    background: #c7243a;
+    border-color: #c7243a;
+}
+
+.bl-btn-state.warning:after {
+    background: #ff8040;
+    border-color: #ff8040;
+}
+
+
+/*------------------------------------------------------------------------------
+  Ｆ１戻るボタン
+------------------------------------------------------------------------------*/
+
+.btn.bl-btn-f1-back {
+    text-align: right;
+    min-height: 34px;
+    -webkit-border-top-right-radius: 20px;
+    -webkit-border-bottom-right-radius: 20px;
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius-topright: 20px;
+    -moz-border-radius-bottomright: 20px;
+    -moz-border-radius-bottomleft: 0;
+    -moz-border-radius-topleft: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #000000;
+    background-color: #FAFAFA;
+    border-color: #FAFAFA;
+}
+
+.btn.bl-btn-f1-back .glyphicon-backward {
+    margin-right: 10px;
+}
+
+.btn.bl-btn-f1-back:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.btn.bl-btn-f1-back.active,
+.btn.bl-btn-f1-back:active {
+    color: #000000;
+    background-color: #E1E1E1;
+    border-color: #E1E1E1;
+}
+
+.btn.bl-btn-f1-back:focus {
+    outline: none;
+}
+
+.btn.bl-btn-f1-back.disabled,
+.btn.bl-btn-f1-back.disabled:hover,
+.btn.bl-btn-f1-back.disabled:focus,
+.btn.bl-btn-f1-back.disabled:active,
+.btn.bl-btn-f1-back[disabled],
+.btn.bl-btn-f1-back[disabled]:hover,
+.btn.bl-btn-f1-back[disabled]:focus,
+.btn.bl-btn-f1-back[disabled]:active {
+    background-color: #F3FBEF;
+    border: 2px solid #F3FBEF;
+    color: #51594D;
+}
+
+
+/*------------------------------------------------------------------------------
+  もっと見るボタン
+------------------------------------------------------------------------------*/
+
+.bl-btn-show-details {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    color: #000000;
+    background-color: #dddddd;
+    border-color: #dddddd;
+}
+
+.bl-btn-show-details:hover,
+.bl-btn-show-details:focus {
+    background-color: #cccccc;
+    border-color: #cccccc;
+}
+
+.bl-btn-show-details.active,
+.bl-btn-show-details:active {
+    background-color: #cccccc;
+    border-color: #cccccc;
+}
+
+.bl-btn-show-details.disabled,
+.bl-btn-show-details.disabled:hover,
+.bl-btn-show-details.disabled:focus,
+.bl-btn-show-details.disabled:active,
+.bl-btn-show-details[disabled],
+.bl-btn-show-details[disabled]:hover,
+.bl-btn-show-details[disabled]:focus,
+.bl-btn-show-details[disabled]:active {
+    background-color: #eeeeee;
+    border: 2px solid #eeeeee;
+    color: #51594D;
+}
+
+.bl-btn-show-details.display-none {
+    display: none;
+}
+
+
+/*------------------------------------------------------------------------------
+  検索系ガイド起動ボタン
+------------------------------------------------------------------------------*/
+
+.bl-btn-search-guide {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent no-repeat;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    border: 2px solid transparent;
+    background: #448eda url("../../../image/icon/ic_search_white_24px.svg") no-repeat center / 80%;
+}
+
+.bl-btn-search-guide:hover,
+.bl-btn-search-guide:focus {
+    background-color: rgba(10, 10, 10, 0.1);
+    color: #333333;
+}
+
+.bl-btn-search-guide.active,
+.bl-btn-search-guide:active {
+    background-color: rgba(10, 10, 10, 0.4);
+    color: #333333;
+}
+
+.bl-btn-search-guide.disabled,
+.bl-btn-search-guide.disabled:hover,
+.bl-btn-search-guide.disabled:focus,
+.bl-btn-search-guide.disabled:active,
+.bl-btn-search-guide[disabled],
+.bl-btn-search-guide[disabled]:hover,
+.bl-btn-search-guide[disabled]:focus,
+.bl-btn-search-guide[disabled]:active {
+    background-color: rgba(10, 10, 10, 0.3);
+    border-color: #BABABA;
+    color: #212E33;
+}
+
+.bl-btn-search-guide:hover,
+.bl-btn-search-guide:focus {
+    background: #599bde url("../../../image/icon/ic_search_white_24px.svg") no-repeat center / 80%;
+}
+
+.bl-btn-search-guide:focus {
+    border-color: #1b6d85;
+}
+
+.bl-btn-search-guide.active,
+.bl-btn-search-guide:active {
+    background: #2774c4 url("../../../image/icon/ic_search_white_24px.svg") no-repeat center / 80%;
+}
+
+.bl-btn-search-guide.disabled,
+.bl-btn-search-guide.disabled:hover,
+.bl-btn-search-guide.disabled:focus,
+.bl-btn-search-guide.disabled:active,
+.bl-btn-search-guide[disabled],
+.bl-btn-search-guide[disabled]:hover,
+.bl-btn-search-guide[disabled]:focus,
+.bl-btn-search-guide[disabled]:active {
+    background-color: #CCCCCC;
+    border-color: #BABABA;
+}
+
+
+/**
+ * 【共通部品】見出し部品スタイル定義
+ *
+ * create : 2016/01/21
+ */
+
+
+/*------------------------------------------------------------------------------
+  見出し１（ふきだし型）
+------------------------------------------------------------------------------*/
+
+.bl-balloon-title {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background: #009240;
+    position: relative;
+    margin: 10px auto 30px;
+    padding: 6px;
+    min-width: 600px;
+    max-width: 1000px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.bl-balloon-title:before {
+    border: 12px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top-color: #009240;
+    height: 0;
+    position: absolute;
+    width: 0;
+    top: 98%;
+    left: 50%;
+    content: "";
+    margin-left: -10px;
+}
+
+.bl-balloon-title .highlight {
+    color: #f0ee2a;
+}
+
+
+/**
+ * ドロップダウンメニュー部品用スタイル定義
+ *
+ * create : 2016/05/17
+ */
+
+
+/*------------------------------------------------------------------------------
+  ドロップダウンメニュー
+------------------------------------------------------------------------------*/
+
+.bl-dropdown.dropdown-menu {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.form-group.grid-form-group {
+    margin: 0;
+}
+
+.wj-content {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+div[wj-part=root],
+div[wj-part=rh] {
+    background-color: #CCCCCC;
+}
+
+.wj-flexgrid {
+    font-size: 14px;
+    color: #333333;
+}
+
+.a-cell {
+    background: #e6fbdb !important;
+}
+
+.b-cell {
+    background: #d1eec5 !important;
+}
+
+.c-cell {
+    background: #FFFFAA !important;
+}
+.null-cell{
+    background: red !important;
+}
+.row-checked{
+    background: #00ffff !important;
+}
+
+.wj-flexgrid .wj-cell.guide-code-button-cell {
+    padding-right: 33px;
+}
+.guide-code-button-cell button {
+    position: absolute;
+    text-align: center;
+    width: 30px;
+    right: 0;
+    top: 0;
+    height: 29px;
+    padding: 1px 0;
+}
+.wj-state-selected {
+    background: #add8e6 !important;
+    color: #333333;
+}
+
+.wj-state-multi-selected {
+    background: #add8e6 !important;
+    color: #333333;
+}
+
+.wj-flexgrid .wj-cell:not(.wj-header):not(.wj-group):not(.wj-alt):not(.wj-state-selected):not(.wj-state-multi-selected) {
+    background: #e6fbdb;
+}
+
+.wj-flexgrid .wj-cell:not(.wj-header):not(.wj-group):not(.wj-alt):not(.wj-state-selected):not(.wj-state-multi-selected):hover {
+    background-color: #bfe4b0 !important;
+}
+
+.wj-flexgrid .wj-alt:not(.wj-header):not(.wj-group):not(.wj-state-selected):not(.wj-state-multi-selected) {
+    background: #d1eec5;
+}
+
+.wj-flexgrid .wj-alt:not(.wj-header):not(.wj-group):not(.wj-state-selected):not(.wj-state-multi-selected):hover {
+    background-color: #bfe4b0 !important;
+}
+
+.wj-grid-editor {
+    height: 100%;
+}
+
+.wj-header {
+    text-align: center !important;
+    background: #009240;
+    color: #ffffff;
+}
+
+.wj-topleft .wj-cell {
+    line-height: 25px;
+}
+
+.wj-colheaders .wj-cell {
+    line-height: 25px;
+}
+
+.wj-colheaders .wj-cell.wj-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wj-rowheaders .wj-cell {
+    line-height: 20px;
+}
+
+.wj-cell {
+    line-height: 20px;
+}
+
+.wj-cell input[type=text],
+.wj-cell input[type=tel] {
+    color: #333333;
+}
+
+.wj-dropdown-panel {
+    box-sizing: content-box;
+}
+
+.wj-dropdown-panel .wj-listbox-item {
+    height: 25px;
+}
+
+div[wj-dropdown] .wj-glyph-down {
+    font-size: 14px;
+}
+
+.form-group.grid-form-group.has-error .wj-flexgrid .wj-cell:not(.wj-header):not(.wj-group):not(.wj-alt):not(.wj-state-selected):not(.wj-state-multi-selected).wj-grid-error-cell {
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+.form-group.grid-form-group.has-error .wj-flexgrid .wj-cell:not(.wj-header):not(.wj-group):not(.wj-alt):not(.wj-state-selected):not(.wj-state-multi-selected).wj-grid-error-cell:hover {
+    background-color: #bfe4b0;
+}
+
+.form-group.grid-form-group.has-error .wj-flexgrid .wj-alt:not(.wj-header):not(.wj-group):not(.wj-state-selected):not(.wj-state-multi-selected).wj-grid-error-cell {
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+.form-group.grid-form-group.has-error .wj-flexgrid .wj-alt:not(.wj-header):not(.wj-group):not(.wj-state-selected):not(.wj-state-multi-selected).wj-grid-error-cell:hover {
+    background-color: #bfe4b0;
+}
+
+.grid-button-type-normal {
+    height: 18px;
+    width: 18px;
+    padding: 0;
+    text-align: center;
+    vertical-align: inherit;
+}
+
+.grid-button-type-image {
+    height: 18px;
+    width: 18px;
+    text-align: center;
+    vertical-align: inherit;
+    background: linear-gradient(to bottom, #FFFFFF 0%, #CDCDCD 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wj-grid-checkbox-container {
+    height: 100%;
+    width: 100%;
+}
+
+.wj-grid-checkbox-container input[type=checkbox] {
+    display: none;
+}
+
+.wj-grid-checkbox-container .button-check {
+    height: 18px;
+    width: 18px;
+    vertical-align: inherit;
+    background: url("../../../image/icon/ic_check_box_outline_blank_black_24px.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wj-grid-checkbox-container .button-check:hover {
+    background-color: #E5FFFF;
+}
+
+.wj-grid-checkbox-container input[type=checkbox]:checked + .button-check {
+    background: url("../../../image/icon/ic_check_box_black_24px.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wj-grid-checkbox-container input[type=checkbox]:checked + .button-check:hover {
+    background-color: #E5FFFF;
+}
+
+.wj-grid-checkbox-container input[type=checkbox]:disabled + .button-check {
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+
+div[wj-part=root] .wj-row-button,
+.wj-cells .wj-row-button {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #B7B7B7;
+    height: 24px;
+    line-height: 24px;
+    width: 200px;
+    position: absolute;
+    display: table-cell;
+    vertical-align: middle;
+    color: #000000;
+    font-size: 14px;
+    padding: 0;
+}
+
+div[wj-part=root] .wj-row-upper,
+.wj-cells .wj-row-upper {
+    text-align: center;
+}
+
+div[wj-part=root] .wj-row-under,
+.wj-cells .wj-row-under {
+    text-align: center;
+}
+
+
+/**
+ *【共通部品】フォーム部品スタイル定義
+ *
+ * create : 2016/01/21
+ */
+
+
+/*------------------------------------------------------------------------------
+  インプット
+------------------------------------------------------------------------------*/
+
+
+/**
+ * INPUT枠内にアイコンを重ねるのに使用するクラス
+ */
+
+.bl-input-group {
+    position: relative;
+    display: inline-block;
+}
+
+.bl-input-group .bl-input {
+    padding-right: 40px;
+}
+
+.bl-input-group .bl-input-group-addon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    pointer-events: none;
+}
+
+
+/**
+ * エラーメッセージ付INPUT
+ * ・エラーメッセージはINPUTの下に表示することを想定
+ */
+
+.form-group.bl-form-group .control-label.bl-input-title {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 8px;
+}
+
+.form-group.bl-form-group .bl-input-example {
+    color: #a9a9a9;
+    font-size: 12px;
+}
+
+.form-group.bl-form-group .bl-input-error {
+    color: #ff0000;
+    font-size: 14px;
+}
+
+
+/**
+ * 例文、エラーメッセージ付INPUT
+ * ・例文はINPUTの上、エラーメッセージはINPUTの下に表示することを想定
+ */
+
+.form-group.bl-form-group-with-example .control-label.bl-input-title {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 28px;
+}
+
+.form-group.bl-form-group-with-example .bl-input-example {
+    color: #a9a9a9;
+    font-size: 12px;
+}
+
+.form-group.bl-form-group-with-example .bl-input-error {
+    color: #ff0000;
+    font-size: 14px;
+}
+
+/**
+ * 入力不可のINPUT
+ */
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+	background-color: #FFFFAA;
+}
+/**
+ * 【共通部品】システムヘッダ部品スタイル定義
+ *
+ * create : 2016/02/26
+ */
+
+
+/*------------------------------------------------------------------------------
+  システムヘッダ
+------------------------------------------------------------------------------*/
+
+.system-header {
+    display: flex;
+    flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    justify-content: space-between;
+    min-height: 62px;
+    padding-right: 20px;
+    background-color: #FFFFFF;
+    color: #777777;
+    margin-top: -15px;
+    width: 102.5%;
+}
+
+.system-header .setting-button {
+    background-image: url("../../../image/icon/ic_settings_black_24px.svg");
+}
+
+.system-header .visibility-button {
+    background-image: url("../../../image/icon/ic_visibility_black_24px.svg");
+}
+
+.system-header .visibility-button--off {
+    background-image: url("../../../image/icon/ic_visibility_off_black_24px.svg");
+}
+
+.system-header__left {
+    display: flex;
+    flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    min-height: inherit;
+}
+
+.system-header__right {
+    display: flex;
+    flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    min-height: inherit;
+    align-items: center;
+}
+
+.account-info {
+    display: flex;
+    flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    font-size: 14px;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.account-info .account-icon {
+    width: 32px;
+    background: url("../../../image/icon/ic_person_gray_24px.svg") no-repeat center / contain;
+}
+
+.account-info .account-name {
+    height: 50px;
+    line-height: 50px;
+    margin-left: 8px;
+    margin-right: 4px;
+}
+
+.account-info #user-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-info .account-button {
+    width: 32px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 0;
+}
+
+.account-info .account-button .caret {
+    margin-left: 0;
+    border-top: 6px dashed;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+}
+
+.account-info .account-button:hover {
+    background-image: -webkit-linear-gradient(top, #EEEEEE 0%, #EEEEEE 100%);
+    background-image: -o-linear-gradient(top, #EEEEEE 0%, #EEEEEE 100%);
+    background-image: linear-gradient(to bottom, #EEEEEE 0%, #EEEEEE 100%);
+    background-repeat: repeat-x;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffeeeeee', endColorstr='#ffeeeeee', GradientType=0);
+}
+
+.account-info .account-button:active {
+    background: #CCCCCC;
+}
+
+.header-button button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    width: 36px;
+    height: 50px;
+}
+
+.header-button .hidden {
+    display: none;
+}
+
+.function-list {
+    display: flex;
+    flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+}
+
+.function-item {
+    display: flex;
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: center;
+    min-width: 80px;
+    color: #777777;
+    background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #FFFFFF 100%);
+    background-image: -o-linear-gradient(top, #FFFFFF 0%, #FFFFFF 100%);
+    background-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 100%);
+    background-repeat: repeat-x;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffffffff', GradientType=0);
+    cursor: pointer;
+}
+
+.function-item:hover {
+    background-image: -webkit-linear-gradient(top, #EEEEEE 0%, #EEEEEE 100%);
+    background-image: -o-linear-gradient(top, #EEEEEE 0%, #EEEEEE 100%);
+    background-image: linear-gradient(to bottom, #EEEEEE 0%, #EEEEEE 100%);
+    background-repeat: repeat-x;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffeeeeee', endColorstr='#ffeeeeee', GradientType=0);
+    color: #777777;
+}
+
+.function-item:active {
+    background: #CCCCCC;
+    color: #777777;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.function-item .dropdown .dropdown-toggle {
+    width: 100%;
+}
+
+.function-item .bl-dropdown.dropdown-menu {
+    top: 106%;
+}
+
+.function-label-container {
+    border-right: 1px solid #CCCCCC;
+}
+
+.function-item:first-child .function-label-container {
+    border: none;
+}
+
+.function-item:nth-child(2) .function-label-container {
+    border-left: 1px solid #CCCCCC;
+}
+
+.function-item--disabled {
+    color: #CCCCCC;
+    cursor: default;
+}
+
+.function-item--disabled:hover {
+    background: #FFFFFF;
+    color: #CCCCCC;
+}
+
+.function-item--disabled:active {
+    background-color: #FFFFFF;
+    color: #CCCCCC;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.function-item--disabled .function-badge {
+    color: #CCCCCC;
+}
+
+.function-label-container {
+    text-align: center;
+}
+
+.function-label {
+    padding: 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.function-badge {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 4px;
+    margin-bottom: 2px;
+    background: #FAFAFA;
+    border: 1px solid #B7B7B7;
+    font-size: 14px;
+    text-align: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+.function-help {
+    justify-content: center;
+    width: 210px;
+    background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #FFFFFF 100%);
+    background-image: -o-linear-gradient(top, #FFFFFF 0%, #FFFFFF 100%);
+    background-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 100%);
+    background-repeat: repeat-x;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffffffff', GradientType=0);
+}
+
+.function-help .function-label-container {
+    display: flex;
+    flex-direction: row-reverse;
+    -moz-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.function-help .function-label {
+    margin-right: 10px;
+}
+
+.function-help .function-badge {
+    margin-bottom: 0;
+    background: #459442;
+    color: #FFFFFF;
+    border: none;
+}
+
+.function-help.function-item--disabled .function-badge {
+    background: rgba(69, 148, 66, 0.5);
+}
+
+.dropdown.header-submenu {
+    z-index: 2500;
+}
+
+.f9-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.f9-mask--hidden {
+    display: none;
+}
+
+.f9-menu {
+    position: absolute;
+    background-color: #FFFFFF;
+    width: 200px;
+    top: 62px;
+    left: 800px;
+    height: 92px;
+    transition: 0.3s;
+    overflow: hidden;
+    -webkit-box-shadow: 0 2px 12px rgba(10, 10, 10, 0.5);
+    -moz-box-shadow: 0 2px 12px rgba(10, 10, 10, 0.5);
+    box-shadow: 0 2px 12px rgba(10, 10, 10, 0.5);
+}
+
+.f9-menu:focus {
+    outline-color: transparent;
+}
+
+.f9-menu--hidden {
+    opacity: 0;
+    height: 0;
+}
+
+.f9-item {
+    color: #555555;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.f9-item:hover {
+    background-color: #e6e6e6;
+}
+
+.f9-item:focus {
+    background-color: #e6e6e6;
+    outline-color: transparent;
+}
+
+#extension .modal-window {
+    width: 1140px;
+    height: 640px;
+}
+
+#extension .modal-body {
+    background-image: url(../../../image/koutei_headless.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+
+/**
+ *【共通部品】システムフッタ部品スタイル定義
+ *
+ * create : 2016/05/11
+ */
+
+
+/*------------------------------------------------------------------------------
+  システムフッタ
+------------------------------------------------------------------------------*/
+
+.system-footer {
+    height: 24px;
+    font-size: 14px;
+}
+
+.system-footer .copyright {
+    color: #555555;
+    text-align: right;
+}
+
+.system-footer .footer-notice-view {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 900px;
+    height: 24px;
+    background-color: #FFFFFF;
+    border-top: 1px solid #B7B7B7;
+    border-right: 1px solid #B7B7B7;
+    z-index: 6000;
+    -webkit-transition: 0.5s height ease-out;
+    -moz-transition: 0.5s height ease-out;
+    -ms-transition: 0.5s height ease-out;
+    -o-transition: 0.5s height ease-out;
+}
+
+.system-footer .footer-notice-view.open {
+    height: 200px;
+}
+
+.system-footer .footer-notice-view.open .headline {
+    border-bottom: 1px solid #B7B7B7;
+}
+
+.system-footer .footer-notice-view.open .headline .notice-btn .glyphicon {
+    transform: rotate(180deg);
+}
+
+.system-footer .footer-notice-view .headline {
+    display: flex;
+    flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    background-color: #EBF1DE;
+    height: 24px;
+    height: 22px;
+    margin-top: 1px;
+}
+
+.system-footer .footer-notice-view .headline .notice-btn {
+    display: none;
+    background: #EBF1DE;
+    height: 100%;
+    padding: 2px 12px;
+    border: none;
+    outline: none;
+}
+
+.system-footer .footer-notice-view .headline .notice-count {
+    display: none;
+    white-space: nowrap;
+    padding: 1px 10px 0 0;
+}
+
+.system-footer .footer-notice-view .headline .notice-title {
+    display: inline-block;
+    padding: 1px 10px 0 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+.system-footer .footer-notice-view .headline .notice-title.link {
+    color: #555555;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.system-footer .footer-notice-view .list-contents {
+    height: 176px;
+    overflow-y: auto;
+}
+
+.system-footer .footer-notice-view .list-contents .notice-list {
+    list-style: disc outside;
+    margin: 0 10px 0 32px;
+    padding: 2px 0;
+}
+
+.system-footer .footer-notice-view .list-contents .notice-list li {
+    padding: 2px 0;
+    color: #555555;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/**
+ * 【共通部品】状況表示系部品スタイル定義
+ *
+ * create : 2016/01/21
+ */
+
+
+/*------------------------------------------------------------------------------
+  バッジ
+------------------------------------------------------------------------------*/
+
+.badge {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+
+/*------------------------------------------------------------------------------
+  進捗状況表示ランプ
+------------------------------------------------------------------------------*/
+
+.bl-diagram-container {
+    display: flex;
+    flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    margin: 0 auto;
+    padding: 0 80px;
+    justify-content: center;
+}
+
+.bl-diagram-container .bl-diagram-begin,
+.bl-diagram-container .bl-diagram-end {
+    padding-top: 5px;
+    white-space: nowrap;
+}
+
+.bl-diagram-container .bl-diagram {
+    display: flex;
+    flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    width: 650px;
+    position: relative;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+}
+
+.bl-diagram-container .bl-diagram .bl-diagram-item {
+    flex: 1;
+    position: relative;
+    padding-top: 25px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.bl-diagram-container .bl-diagram .bl-diagram-item:before {
+    content: "";
+    position: absolute;
+    border-top: 2px solid #777777;
+    width: 100%;
+    top: 9px;
+    right: 0;
+}
+
+.bl-diagram-container .bl-diagram .bl-diagram-item:first-child:before {
+    width: 50%;
+}
+
+.bl-diagram-container .bl-diagram .bl-diagram-item:last-child:before {
+    width: 50%;
+    right: auto;
+    left: 0;
+}
+
+.bl-diagram-item:after {
+    content: "";
+    background-color: #ffffff;
+    border: solid 2px #117065;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    margin-left: 50%;
+}
+
+.bl-diagram-item.completion:after {
+    background-color: #117065;
+}
+
+.bl-diagram-item.current:after {
+    background-color: #f0ee2a;
+}
+
+
+/**
+ *【共通部品】リスト部品スタイル定義
+ *
+ * create : 2016/01/22
+ */
+
+
+/*------------------------------------------------------------------------------
+  リスト基本スタイル
+------------------------------------------------------------------------------*/
+
+.bl-list-container ul {
+    border: 1px solid #AAAAAA;
+}
+
+.bl-list-container .scroll-y {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.bl-list-header {
+    display: flex;
+    flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    border: 1px solid #AAAAAA;
+    border-bottom: none;
+    padding: 8px 10px;
+    background-color: #009240;
+    color: #FFFFFF;
+}
+
+.bl-list-header .header-checkbox {
+    width: 20px;
+    height: 22px;
+    margin-right: 8px;
+    cursor: pointer;
+    background: url("../../../image/icon/ic_check_box_outline_blank_black_24px.svg") no-repeat center;
+}
+
+.bl-list-header .header-checkbox.checked {
+    background: url("../../../image/icon/ic_check_box_black_24px.svg") no-repeat center;
+}
+
+.bl-list-header .header-checkbox:focus {
+    background: url("../../../image/icon/ic_check_box_outline_blank_black_focus_24px.svg") no-repeat center;
+}
+
+.bl-list-header .header-checkbox:focus.checked {
+    background: url("../../../image/icon/ic_check_box_black_24px.svg") no-repeat center;
+}
+
+.bl-list-item {
+    position: relative;
+    padding: 0;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #AAAAAA;
+}
+
+.bl-list-item .item-label {
+    padding: 8px 12px;
+}
+
+.bl-list-item:last-child {
+    border-bottom: 1px solid transparent;
+}
+
+.bl-list-item.bl-list-item-focused {
+    border: 2px solid #00bfff;
+}
+
+
+/*------------------------------------------------------------------------------
+  排他リスト
+------------------------------------------------------------------------------*/
+
+.bl-select-list {
+    position: relative;
+}
+
+.bl-select-list .bl-list-item .item-label {
+    padding-left: 40px;
+}
+
+.bl-select-list .bl-list-item:hover {
+    background-color: #E5FFFF;
+}
+
+.bl-select-list .bl-list-item.bl-list-item-checked {
+    background-color: #b2daa2;
+}
+
+.bl-select-list .bl-list-item.bl-list-item-checked:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    content: '';
+    width: 24px;
+    height: 100%;
+    margin-left: 8px;
+    margin-right: 8px;
+    background: transparent;
+    background: url("../../../image/icon/ic_check_black_24px.svg") no-repeat center;
+}
+
+.bl-select-list .bl-list-item.bl-list-item-focused .item-label {
+    padding: 6px 12px 7px 38px;
+}
+
+.bl-select-list .bl-list-item.bl-list-item-focused:before {
+    top: -1px;
+    left: -2px;
+}
+
+.bl-select-list .bl-list-item > input[type=radio] {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    opacity: 0;
+    z-index: -1;
+    height: 100%;
+}
+
+
+/*------------------------------------------------------------------------------
+  選択リスト
+------------------------------------------------------------------------------*/
+
+.bl-check-list {
+    position: relative;
+    /*------------------------------------------------------------------------------
+    ボタンリスト
+  ------------------------------------------------------------------------------*/
+}
+
+.bl-check-list .bl-list-item {
+    position: relative;
+    padding-left: 2px;
+    cursor: pointer;
+}
+
+.bl-check-list .bl-list-item .item-label {
+    padding-left: 40px;
+}
+
+.bl-check-list .bl-list-item:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    content: '';
+    width: 24px;
+    height: 100%;
+    margin-left: 8px;
+    margin-right: 8px;
+    background: transparent;
+    background: url("../../../image/icon/ic_check_box_outline_blank_black_24px.svg") no-repeat center;
+}
+
+.bl-check-list .bl-list-item:hover {
+    background-color: #E5FFFF;
+}
+
+.bl-check-list .bl-list-item.bl-list-item-checked {
+    background-color: #b2daa2;
+}
+
+.bl-check-list .bl-list-item.bl-list-item-checked:before {
+    background: url("../../../image/icon/ic_check_box_black_24px.svg") no-repeat center;
+}
+
+.bl-check-list .bl-list-item.bl-list-item-focused .item-label {
+    padding: 6px 12px 7px 38px;
+}
+
+.bl-check-list .bl-list-item.bl-list-item-focused:before {
+    top: -1px;
+    left: -2px;
+}
+
+.bl-check-list .bl-list-item.bl-list-item-readonly {
+    color: #999999;
+    cursor: not-allowed;
+}
+
+.bl-check-list .bl-list-item.bl-list-item-readonly:before {
+    background: url("../../../image/icon/ic_check_box_outline_blank_gray_24px.svg") no-repeat center;
+}
+
+.bl-check-list .bl-list-item.bl-list-item-readonly.bl-list-item-checked:before {
+    background: url("../../../image/icon/ic_check_box_gray_24px.svg") no-repeat center;
+}
+
+.bl-check-list .bl-list-item input[type=checkbox] {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 10px;
+    opacity: 0;
+    z-index: -1;
+    height: 100%;
+}
+
+.bl-check-list.button-list .bl-list-item:before {
+    content: none;
+    background: none;
+}
+
+.bl-check-list.button-list .bl-list-item.bl-list-item-focused .btn-list {
+    padding: 6px 10px 7px;
+}
+
+.bl-check-list.button-list .btn-list {
+    margin: 0 auto;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 8px 12px;
+    font-size: 100%;
+    text-align: left;
+    width: 100%;
+}
+
+.bl-check-list.button-list .btn-list:focus {
+    outline: none;
+}
+
+
+/**
+ * モーダルウインドウ 共通スタイル定義
+ *
+ * create : 2015.11.20
+ */
+
+
+/**
+ * [Mixin]モーダルウインドウのサイズ指定
+ * サイズ指定するだけで、画面中央に配置されます
+ */
+
+.modal-window-base {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3000;
+}
+
+.modal-window-base--shown {
+    display: block;
+}
+
+.modal-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-mask .top-spacer {
+    flex: 1 0 10px;
+}
+
+.modal-mask .bottom-spacer {
+    flex: 1 1 auto;
+}
+
+.modal-window {
+    width: 1000px;
+    height: 600px;
+    box-shadow: 0 4px 16px 1px rgba(10, 10, 10, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-window:focus {
+    outline: none;
+}
+
+.modal-header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    height: 50px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 2px 2px 0 0;
+    border-bottom: 1px solid #E5E5E5;
+    background-color: #FFF;
+}
+
+.modal-header__center {
+    height: 42px;
+    line-height: 42px;
+    font-weight: bold;
+    /* flex以外のプロパティは別途指定してください */
+    flex: 1 1 0px;
+    padding: 4px;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+
+.modal-header__left {
+    /* flex以外のプロパティは別途指定してください */
+    flex: 1 1 0px;
+    padding: 4px;
+    text-align: left;
+}
+
+.modal-header__right {
+    /* flex以外のプロパティは別途指定してください */
+    flex: 1 1 0px;
+    padding: 4px;
+    text-align: right;
+}
+
+.modal-body {
+    width: 100%;
+    background-color: #FFF;
+    overflow: hidden;
+    /* flex以外のプロパティは別途指定してください */
+    flex: 1 1 0px;
+}
+
+.modal-body .mask > * {
+    opacity: 1;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -ms-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+}
+
+.modal-body .mask.mask-enabled > * {
+    opacity: 0;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+}
+
+.modal-hide-button {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.modal-hide-button .cross {
+    display: flex;
+    flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    width: inherit;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+    font-family: "ＭＳ ゴシック", "MS Gothic", "メイリオ", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif, "Glyphicons Halflings";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.modal-hide-button:hover {
+    background-color: #e6e6e6;
+}
+
+.modal-footer {
+    display: none;
+    width: 100%;
+    background-color: #FFF;
+    border-top: 1px solid #E5E5E5;
+    padding: 4px 8px;
+}
+
+.modal-footer .buttons {
+    display: inline-block;
+}
+
+.modal-footer .buttons + .buttons {
+    margin-left: 8px;
+}
+
+.dialog-window-base {
+    display: none;
+    z-index: 3001;
+}
+
+.dialog-window-base .modal-window {
+    width: 320px;
+    height: 200px;
+}
+
+.dialog-window-base .modal-header {
+    height: 50px;
+}
+
+.dialog-window-base .modal-header__center {
+    height: 49px;
+    line-height: 49px;
+}
+
+.dialog-window-base .modal-footer {
+    display: block;
+    text-align: center;
+}
+
+.dialog-window-base .buttons button {
+    min-width: 90px;
+}
+
+.dialog-window-base--shown {
+    display: block;
+}
+
+
+/**
+ * 【共通部品】エラー通知パネル
+ * errornotify.less
+ *
+ * create : 2016/02/09
+ */
+
+
+/*------------------------------------------------------------------------------
+エラー通知パネル
+------------------------------------------------------------------------------*/
+
+#bl-error-notify {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(242, 222, 222, 0.5);
+    border-radius: 4px;
+    font-size: 14px;
+    z-index: 5000;
+    min-width: 250px;
+}
+
+#bl-error-notify .bl-error-notify-title {
+    padding: 4px 0 4px 15px;
+    border-radius: 4px 4px 0 0;
+    background-color: rgba(255, 0, 0, 0.8);
+    color: #FFFFFF;
+    cursor: move;
+}
+
+#bl-error-notify .bl-error-notify-title .close {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    font-size: 14px;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+#bl-error-notify .bl-error-notify-title .close:hover {
+    opacity: 1;
+}
+
+#bl-error-notify .bl-error-notify-contents {
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 0 0 4px 4px;
+    border-color: #EBCCD1;
+    color: #DC143C;
+}
+
+#bl-error-notify .bl-error-notify-contents ul {
+    max-width: 350px;
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+#bl-error-notify .bl-error-notify-contents li {
+    cursor: pointer;
+    list-style-type: circle;
+    list-style-position: inside;
+    text-decoration: underline;
+}
+
+#bl-error-notify .bl-error-notify-contents li:hover {
+    color: #B31031;
+}
+
+#bl-error-notify .bl-error-notify-contents li.selected {
+    list-style-type: disc;
+    font-weight: bold;
+}
+
+#bl-error-notify.minimum {
+    bottom: 0;
+    min-width: 130px;
+    background-color: #FF0000;
+}
+
+#bl-error-notify.minimum .bl-error-notify-title {
+    cursor: pointer;
+}
+
+#bl-error-notify.minimum .bl-error-notify-count {
+    margin: 0 4px;
+    font-size: 16px;
+}
+
+#bl-error-notify.minimum .bl-error-notify-open {
+    margin-left: 10px;
+    margin-top: 4px;
+    margin-right: 6px;
+    float: right;
+}
+
+#bl-error-notify.minimum button.close {
+    display: none;
+}
+
+#bl-error-notify.minimum .bl-error-notify-contents {
+    display: none;
+}
+
+
+/**
+ * 数値型インプット
+ *
+ * create : 2016/01/19
+ */
+
+
+/*------------------------------------------------------------------------------
+  レイアウト
+------------------------------------------------------------------------------*/
+
+.number {
+    width: 150px;
+    text-align: right;
+}
+
+.number.disabled,
+.number.disabled:hover,
+.number.disabled:focus,
+.number.disabled:active,
+.number[disabled],
+.number[disabled]:hover,
+.number[disabled]:focus,
+.number[disabled]:active {
+    color: #CCCCCC;
+}
+
+.code {
+    width: 150px;
+    text-align: left;
+}
+
+.code.disabled,
+.code.disabled:hover,
+.code.disabled:focus,
+.code.disabled:active,
+.code[disabled],
+.code[disabled]:hover,
+.code[disabled]:focus,
+.code[disabled]:active {
+    color: #CCCCCC;
+}
+
+
+/**
+ * ナンバープレートコントロール
+ *
+ * {1:陸運支局名称}{2:分類番号}{3:ひらがな}{4:一連指定番号}
+ * 陸運支局名称: {1: 品川　　}
+ * 分類番号: {2: 300}
+ * ひらがな: {2: さ}
+ * 一連指定番号: {2: 5555}
+ *
+ * create : 2016/03/15
+ */
+
+
+/*------------------------------------------------------------------------------
+  レイアウト
+------------------------------------------------------------------------------*/
+
+.number-plate {
+    width: 484px;
+}
+
+.number-plate .plate1.disabled,
+.number-plate .plate1.disabled:hover,
+.number-plate .plate1.disabled:focus,
+.number-plate .plate1.disabled:active,
+.number-plate .plate1[disabled],
+.number-plate .plate1[disabled]:hover,
+.number-plate .plate1[disabled]:focus,
+.number-plate .plate1[disabled]:active {
+    color: #CCCCCC;
+}
+
+.number-plate .plate1 .form-control {
+    width: 90px;
+    text-align: left;
+}
+
+.number-plate .plate1 .form-control[readonly] {
+    background-color: #FFFFFF;
+}
+
+.number-plate .plate1 .landtransport {
+    display: flex;
+    flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    align-items: center;
+}
+
+.number-plate .plate1 .landtransport .btn-guide {
+    margin: 0 4px;
+}
+
+.number-plate .plate2.disabled,
+.number-plate .plate2.disabled:hover,
+.number-plate .plate2.disabled:focus,
+.number-plate .plate2.disabled:active,
+.number-plate .plate2[disabled],
+.number-plate .plate2[disabled]:hover,
+.number-plate .plate2[disabled]:focus,
+.number-plate .plate2[disabled]:active {
+    color: #CCCCCC;
+}
+
+.number-plate .plate2 .form-control {
+    width: 55px;
+    text-align: left;
+}
+
+.number-plate .plate3.disabled,
+.number-plate .plate3.disabled:hover,
+.number-plate .plate3.disabled:focus,
+.number-plate .plate3.disabled:active,
+.number-plate .plate3[disabled],
+.number-plate .plate3[disabled]:hover,
+.number-plate .plate3[disabled]:focus,
+.number-plate .plate3[disabled]:active {
+    color: #CCCCCC;
+}
+
+.number-plate .plate3 .form-control {
+    width: 40px;
+    text-align: left;
+}
+
+.number-plate .plate4.disabled,
+.number-plate .plate4.disabled:hover,
+.number-plate .plate4.disabled:focus,
+.number-plate .plate4.disabled:active,
+.number-plate .plate4[disabled],
+.number-plate .plate4[disabled]:hover,
+.number-plate .plate4[disabled]:focus,
+.number-plate .plate4[disabled]:active {
+    color: #CCCCCC;
+}
+
+.number-plate .plate4 .form-control {
+    width: 60px;
+    text-align: right;
+}
+
+.example {
+    color: #a9a9a9;
+    font-size: 12px;
+}
+
+
+/**
+ * 郵便番号インプット
+ *
+ * create : 2016/01/19
+ */
+
+
+/*------------------------------------------------------------------------------
+  レイアウト
+------------------------------------------------------------------------------*/
+
+.postcode {
+    align-items: center;
+}
+
+.postcode.disabled,
+.postcode.disabled:hover,
+.postcode.disabled:focus,
+.postcode.disabled:active,
+.postcode[disabled],
+.postcode[disabled]:hover,
+.postcode[disabled]:focus,
+.postcode[disabled]:active {
+    color: #CCCCCC;
+}
+
+.postcode .postcode-first {
+    width: 44px;
+    margin-right: 6px;
+    padding: 6px;
+}
+
+.postcode .postcode-second {
+    width: 50px;
+    margin-left: 6px;
+    padding: 6px;
+}
+
+.postcode .postcode-data-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.postcode.dropdown {
+    z-index: 7000;
+}
+
+.address-notfound {
+    margin: auto 5px;
+    background-color: transparent;
+}
+
+.address-notfound-hidden {
+    visibility: hidden;
+}
+
+.address-notfound-message {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.example {
+    color: #a9a9a9;
+    font-size: 12px;
+}
+
+
+/**
+ * 電話番号インプット
+ *
+ * create : 2016/01/19
+ */
+
+
+/*------------------------------------------------------------------------------
+  レイアウト
+------------------------------------------------------------------------------*/
+
+.telephone {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.telephone input {
+    width: 60px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin: 0 4px;
+}
+
+.telephone input.disabled,
+.telephone input.disabled:hover,
+.telephone input.disabled:focus,
+.telephone input.disabled:active,
+.telephone input[disabled],
+.telephone input[disabled]:hover,
+.telephone input[disabled]:focus,
+.telephone input[disabled]:active {
+    color: #CCCCCC;
+}
+
+.telephone input:first-child {
+    margin-left: 0;
+}
+
+.telephone input:last-child {
+    margin-right: 0;
+}
+
+.telephone .tel-data-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.example {
+    color: #a9a9a9;
+    font-size: 12px;
+}
+
+
+/**
+ *【共通部品】処理中表示部品スタイル定義
+ *
+ * create : 2016/03/03
+ */
+
+.bl-loading-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 7000;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.small-spinner {
+    transform: scale(0.62);
+}
+
+.big-spinner {
+    transform: scale(1.2);
+}
+
+.spinner-clear-mask {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.spinner-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 60%;
+}
+
+.spinner-content span {
+    content: "";
+    min-width: 80px;
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+
+.spinner-content .spinner-label {
+    padding: 10px 20px 10px 14px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    word-break: break-all;
+}
+
+.spinner-content-bg {
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.spinner-display-none {
+    display: none;
+}
+
+
+/**
+ * 印刷フォーム選択 スタイル定義
+ *
+ * create : 2016.03.10
+ */
+
+#dialog-print-form-select .modal-window {
+    width: 500px;
+    height: 220px;
+}
+
+#dialog-print-form-select .modal-footer {
+    text-align: right;
+}
+
+#dialog-print-form-select .print-form {
+    margin: 5px 0 30px 0;
+    width: 470px;
+}
+
+#dialog-print-form-select .adobe-link-container {
+    display: flex;
+    flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    justify-content: flex-end;
+}
+
+#dialog-print-form-select .adobe-link-container img {
+    width: 120px;
+}
+
+#dialog-print-form-select .get-adobe-reader {
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+
+/**
+ * 【共通部品】タブ
+ * tab.less
+ *
+ * create : 2016/03/08
+ */
+
+
+/*------------------------------------------------------------------------------
+タブ 共通
+------------------------------------------------------------------------------*/
+
+.nav > li > a > span.glyphicon {
+    margin-left: 10px;
+}
+
+
+/*------------------------------------------------------------------------------
+タブ stacked
+------------------------------------------------------------------------------*/
+
+.tab-container.stacked {
+    display: flex;
+    flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+}
+
+.nav.nav-stacked {
+    width: 240px;
+}
+
+
+/**
+ *【共通部品】チェックボックス部品スタイル定義
+ *
+ * create : 2016/04/14
+ */
+
+
+/*------------------------------------------------------------------------------
+  チェックボックススタイル
+------------------------------------------------------------------------------*/
+
+.bl-checkbox {
+    display: flex;
+    flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+}
+
+.bl-checkbox .checkbox-item {
+    position: relative;
+    cursor: pointer;
+    margin-left: 2px;
+    color: #000000;
+}
+
+.bl-checkbox .checkbox-item .item-label {
+    padding: 5px 8px 0 32px;
+    width: 100%;
+    height: 100%;
+    min-width: 32px;
+    min-height: 32px;
+    margin-bottom: 2px;
+}
+
+.bl-checkbox .checkbox-item .item-label:hover {
+    background-color: #E5FFFF;
+}
+
+.bl-checkbox .checkbox-item:before {
+    position: absolute;
+    top: 4px;
+    content: '';
+    width: 24px;
+    height: 24px;
+    margin-left: 4px;
+    background: transparent;
+    background: url("../../../image/icon/ic_check_box_outline_blank_black_24px.svg") no-repeat center;
+}
+
+.bl-checkbox .checkbox-item.label-empty .item-label {
+    padding: 0;
+}
+
+.bl-checkbox .checkbox-item.bl-checkbox-item-checked:before {
+    background: url("../../../image/icon/ic_check_box_black_24px.svg") no-repeat center;
+}
+
+.bl-checkbox .checkbox-item.bl-checkbox-item-focused .item-label {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-box-shadow: 0 0 0 2px #66afe9;
+    -moz-box-shadow: 0 0 0 2px #66afe9;
+    box-shadow: 0 0 0 2px #66afe9;
+}
+
+.bl-checkbox .checkbox-item label {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+.bl-checkbox .checkbox-item input[type=checkbox] {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+}
+
+.bl-checkbox .checkbox-item.disabled,
+.bl-checkbox .checkbox-item.disabled:hover,
+.bl-checkbox .checkbox-item.disabled:focus,
+.bl-checkbox .checkbox-item.disabled:active,
+.bl-checkbox .checkbox-item[disabled],
+.bl-checkbox .checkbox-item[disabled]:hover,
+.bl-checkbox .checkbox-item[disabled]:focus,
+.bl-checkbox .checkbox-item[disabled]:active {
+    color: #777777;
+    opacity: 0.8;
+}
+
+.bl-checkbox .checkbox-item.disabled:before,
+.bl-checkbox .checkbox-item.disabled:hover:before,
+.bl-checkbox .checkbox-item.disabled:focus:before,
+.bl-checkbox .checkbox-item.disabled:active:before,
+.bl-checkbox .checkbox-item[disabled]:before,
+.bl-checkbox .checkbox-item[disabled]:hover:before,
+.bl-checkbox .checkbox-item[disabled]:focus:before,
+.bl-checkbox .checkbox-item[disabled]:active:before {
+    opacity: 0.5;
+}
+
+.bl-checkbox .checkbox-item.disabled .item-label:hover,
+.bl-checkbox .checkbox-item.disabled:hover .item-label:hover,
+.bl-checkbox .checkbox-item.disabled:focus .item-label:hover,
+.bl-checkbox .checkbox-item.disabled:active .item-label:hover,
+.bl-checkbox .checkbox-item[disabled] .item-label:hover,
+.bl-checkbox .checkbox-item[disabled]:hover .item-label:hover,
+.bl-checkbox .checkbox-item[disabled]:focus .item-label:hover,
+.bl-checkbox .checkbox-item[disabled]:active .item-label:hover {
+    background-color: transparent;
+}
+
+.bl-f1-nav-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: underline;
+    color: #0606A4;
+    padding-left: 32px;
+}
+
+.bl-f1-nav-link:hover {
+    text-decoration: none;
+    color: #0606A4;
+}
+
+.bl-f1-nav-link:after {
+    content: "";
+    position: absolute;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    top: 4px;
+    background-color: #0606A4;
+}
+
+.bl-f1-nav-link.ok:after {
+    background-color: #069655;
+}
+
+.bl-f1-nav-link.error:after {
+    background-color: #ca293f;
+}
+
+.bl-f1-nav-link.warning:after {
+    background-color: #f8cd0c;
+}
+
+
+/**
+ * 【共通部品】ツールチップ
+ *
+ * create : 2016/06/20
+ */
+
+
+/*------------------------------------------------------------------------------
+  bootstrapのtooltipスタイルをカスタマイズ
+------------------------------------------------------------------------------*/
+
+.tooltip-inner {
+    max-width: none;
+    background-color: #dddddd;
+    color: #333333;
+    box-shadow: 0 1px 2px #555555;
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: #dddddd;
+    opacity: 0;
+}
+
+.tooltip.top {
+    margin-top: 1px;
+}
+
+
+/**
+ * 【共通部品】スイッチ
+ *
+ * create : 2016/07/22
+ */
+
+.bl-switch {
+    display: flex;
+    flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    position: relative;
+    background-color: #2d3035;
+    border-radius: 3px;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.bl-switch.disabled {
+    cursor: not-allowed;
+}
+
+.bl-switch.disabled label {
+    cursor: not-allowed;
+}
+
+.bl-switch.disabled .bl-switch-slider {
+    background-color: #999999;
+}
+
+.bl-switch .bl-switch-slider {
+    -webkit-transition: left 0.2s ease-out 0s;
+    -moz-transition: left 0.2s ease-out 0s;
+    -ms-transition: left 0.2s ease-out 0s;
+    -o-transition: left 0.2s ease-out 0s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #70c66b;
+    border: 1px solid #2d3035;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.45);
+}
+
+.bl-switch .bl-switch-slider.right {
+    left: 50%;
+}
+
+.bl-switch .bl-switch-item {
+    /* flex以外のプロパティは別途指定してください */
+    flex: 1 1 0px;
+    position: relative;
+    padding: 4px;
+    text-align: center;
+}
+
+.bl-switch .bl-switch-item label {
+    position: relative;
+    margin: 0;
+    color: #FFFFFF;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.bl-switch .bl-switch-item.checked label {
+    color: #000000;
+}
+
+
+/**
+ *【共通部品】インクリメンタルサーチスタイル定義
+ *
+ * create : 2016/08/01
+ */
+
+.bl-incremental-search {
+    position: relative;
+}
+
+
+/**
+ *【履歴一覧画面の共通】スタイル定義
+ *
+ * create : 2017/01/09
+ */
+
+body {
+    padding: 15px;
+    background-color: #E6FBDB;
+}
+
+.page-header {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #009240;
+}
+
+.page-header h2 {
+    margin-top: 10px;
+}
+
+.container {
+    margin: 0;
+    padding: 0 0 15px 0;
+    width: 100%;
+    height: 100%;
+    min-width: 230px;
+    display: flex;
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    position: relative;
+}
+
+.panel-primary {
+    border-color: #009240;
+}
+
+.panel-primary>.panel-heading {
+    color: #fff;
+    background-color: #009240;
+    border-color: #009240;
+}
+
+.panel {
+    background-color: transparent;
+}
+
+.panel-body {
+    display: flex;
+    flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 0px;
+}
+
+
+/* panel-body.padding+input-group.padding = 15px */
+
+.panel-body .input-group {
+    display: flex;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+/* padding-top=[default padding-top]+(span.height-span.fontsize)/2 */
+
+
+/* padding-top=6+(20-14)/2 */
+
+.input-group .input-group-addon {
+    padding-top: 9px;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: middle;
+    background-color: #009240;
+    border-color: #009240;
+    color: #FFFFFF;
+    height: 34px;
+}
+
+.panel-body .group-button {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    display: flex;
+    flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+}
+
+
+/* .group-button.padding-right + (.group-button .btn).margin-right = 15px */
+
+.group-button .btn {
+    margin-right: 15px;
+}
+
+.input-group .between {
+    border-left: 0px;
+    border-right: 0px;
+    max-width: 40px !important;
+    min-width: 40px !important;
+}
+
+.bl-btn-3 {
+    width: 70px;
+}
+
+.result-list {
+    display: flex;
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    height: 100%;
+}
+
+.badge {
+    background: blue;
+}
+
+.result-title {
+    padding-bottom: 5px;
+}
+
+.slide-panel .panel-heading span.glyphicon-chevron-down {
+    right: 0px;
+    left: auto;
+    font-size: 9pt;
+    color: #FFFFFF;
+}
+
+.slide-down span.glyphicon-chevron-down {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.slide-panel .panel-heading-down {
+    display: flex;
+    flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+
+/* 必須入力記号と記号説明タイトル */
+
+.required-title,
+.required-mark {
+    color: #FF0000;
+}
+
+.panel-title .required-title {
+    margin-left: 20px;
+    font-size: 11pt;
+}
+
+.w2ui-col-header {
+    text-align: center;
+}
+
+
+/**
+ * 【共通部品】
+ *
+ * create : 2017/01/17
+ */
+
+
+/*------------------------------------------------------------------------------
+  bootstrapのmenu&header
+------------------------------------------------------------------------------*/
+
+.guest {
+    padding-left: 0px;
+}
+
+.guest-profile {
+    width: 450px !important;
+    height:62px;
+    line-height:62px;
+    font-size: 12pt;
+    cursor: pointer;
+    float: right;
+}
+
+.glyphicon-chevron-down {
+    margin-left: 5px;
+}
+
+.guest-content {
+    height: 40px;
+    width: 70%;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    position: absolute;
+    right: 5%;
+    top: 60px;
+    background-color: #fff;
+    line-height: 35px;
+    cursor: pointer;
+    display: none;
+    float: right;
+}
+
+.dropdown {
+    font-size: 20px;
+    text-align: center;
+}
+
+.dropdown-menu {
+    font-size: 17px;
+    background-color: #F6F6F6;
+    width: 220px;
+}
+
+.divider {
+    margin-bottom: 0px !important;
+}
+
+.container-fluid div {
+    border-right: 1px solid #cccccc;
+}
+
+.dropdown-toggle {
+    border-right: 1px solid #cccccc;
+    width: 220px;
+}
+
+header,
+nav,
+footer {
+    margin-left: -15px;
+}
+
+.breadcrumb {
+    background-color: #E6FBDB;
+    margin-bottom: -10px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #333;
+}
+
+.navbar-default .navbar-brand {
+    color: #333;
+}
+
+.common-header {
+    height: 100px;
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd	
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+	<!-- Property Placeholder -->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+		<property name="locations">
+			<list>
+				<value>classpath:sendgrid.properties</value>
+			</list>
+		</property>
+	</bean>
+	
+	<context:component-scan base-package="jp.co.broadleaf.breg" use-default-filters="false">
+		<context:include-filter type="regex" expression=".*ServiceImpl" />
+		<context:include-filter type="regex" expression=".*FacadeImpl" />
+		<context:include-filter type="regex" expression=".*DaoImpl" />
+	</context:component-scan>
+
+	<bean id="bregDaoScanner" class="jp.co.broadleaf.framework.persistence.GenericDaoScannerConfigurer">
+		<property name="basePackage" value="jp.co.broadleaf.breg" />
+		<property name="daoWrapClass" value="jp.co.broadleaf.common.persistence.BroadleafGenericDao" />
+		<property name="entityManagerResolverBeanName" value="entityManagerResolver" />
+	</bean>
+	
+	<!-- ExcessiveAccessLimitFacade Transaction -->
+	<!-- <aop:config>
+		<aop:pointcut id="excessiveAccessLimitFacadeMethodPointcut" expression="execution(public * jp.co.broadleaf.breg.account.biz.facade.impl.ExcessiveAccessLimitFacadeImpl.*(..))" />
+		<aop:advisor pointcut-ref="excessiveAccessLimitFacadeMethodPointcut" advice-ref="excessiveAccessLimitFacadeMethodTxAdvice" />
+	</aop:config>
+	<tx:advice id="excessiveAccessLimitFacadeMethodTxAdvice" transaction-manager="dataSourceTransactionManager">
+		<tx:attributes>
+			<tx:method name="confirmExcessiveAccess" propagation="REQUIRES_NEW" />
+		</tx:attributes>
+	</tx:advice> -->
+</beans>

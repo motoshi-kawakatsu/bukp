@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+/**
+ * 担当者情報ファイル
+ *
+ * create : 2017/02/13
+ */
+.tab {
+	border-bottom: none;
+	padding: 8px 10px;
+	background-color: #009240;
+	color: #FFFFFF;
+	width: 40%;
+}
+.mark {
+	background-color: #009240;
+	color: red;
+	width: 5%;
+}
+.breadcrumb {
+    background-color: #E6FBDB;
+    margin-bottom: -8px;
+    padding: 9px 15px;
+    list-style: none;
+    border-radius: 4px;
+}
+.page-header {
+	font-size: 30px;
+	margin-top: -10px;
+	margin-bottom: 10px;
+}
+.page-header h2 {
+     margin-top: 10px; 
+     margin-bottom: 10px;
+}
+.bl-btn {
+	margin: 0 auto;
+	color: #009240;
+	border: 2px solid #009240;
+}
+.bl-btn:hover, .bl-btn:focus {
+	color: #009240;
+	background-color: #009240;
+}
+.usersetting-length-2 {
+	width: 60%;
+	min-width: 500px;
+	margin-left: 20%;
+}
+.bl-btn-panel {
+	width: 75px;
+}
+.group-button {
+	margin-right: 0px;
+}
+.form-control {
+	width: 250px;
+}
+.group-button .btn {
+	margin-right: 15px;
+}
+.bl-btn-wiz-prev-2 {
+	margin-left: 36%;
+	width: 10%;
+	min-width: 75px;
+}
+.bl-btn-wiz-next-2 {
+	margin-left: 7%;
+	width: 10%;
+	min-width: 75px;
+}
+.disabled {
+	pointer-events: none;
+	outline: none;
+	background-color: #E6FBDB;
+}
+footer {
+	text-align: center;
+}
+#comInfo, #setInfo {
+	width: 100%;
+}
+.backbg {
+	background-color: #E0E0E0;
+	color: black;
+}
+.panel-title {
+	margin-left: 45%;
+}
+.panel-title-left {
+	margin-left: 15px;
+}
+.select_group {
+	width: 150px;
+	min-width: 150px;
+	height: 100%;
+	padding-top: 10px;
+	margin-left: 2%;
+	vertical-align: center;
+	text-align: left;
+}
+.panel-body {
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+}
+.main {
+	width: 100%;
+	height: 100%;
+}
+.usersetting-btn {
+	width: 100%;
+	margin-bottom: 3%;
+	margin-top: 1%;
+}
+.container {
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+div.textareared {
+	width: 100%;
+	border: 2px solid #f4a2a2;
+	background-color: #ffeeee;
+	padding: 10px !important;
+	margin: 0 0 10px 0;
+	text-align: left;
+	font-size: 13px;
+}
+div.textareared ul {
+	padding: 0;
+	margin: 0 !important;
+	list-style-position: inside;
+}
+div.textareared ul li.icon {
+	text-align: center !important;
+	list-style: none !important;
+	padding: 0 0 5px 0 !important;
+}
+img.leftspace6 {
+	margin: 0 0 0 6px;
+	font-size: 17px;
+}
+img.rightspace4 {
+	margin: 0 4px 0 0;
+}
+span.red {
+	color: #FF0000;
+}
+.input-group-addon {
+	float: left !important;
+	width: 300px !important;
+	border-top-left-radius: 4px !important;
+	border-bottom-left-radius: 4px !important;
+	height: 30px !important;
+}
+.form-control {
+	width: calc(100% - 300px) !important;
+	position: absolute !important;
+	left: 300px;
+	bottom: 5px;
+	height: 30px !important;
+}
+.loginId {
+	background-color: #FFFFAA !important; 	
+}
+.userAdminFlag {
+	background-color: #FFFFAA !important; 	
+}

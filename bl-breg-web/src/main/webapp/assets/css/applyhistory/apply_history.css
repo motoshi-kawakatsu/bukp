@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+/**
+ * 申請履歴一覧画面
+ *
+ * create : 2017/01/09
+ */
+
+.input-group .input-group-addon {
+    min-width: 90px;
+}
+.data-sort{
+	margin-left:0.8%;
+	width:26%;
+}
+
+ .apply-no,
+.apply-status{
+    width: 30%;
+}
+.apply-type,
+.insert-date{
+	width: 40%;
+}
+
+/* .panel-body .apply-date {
+    width: 46%;
+}
+ */
+.result-grid {
+    height: 100%;
+}
+
+.apply_general_new,
+.apply_general_history,
+.apply-shosai,
+.total-joho {
+    width: 90px;
+}
+
+.apply_kensu {
+    float: right;
+}
+
+.apply-sort {
+    float: left;
+}
+
+.apply-shosai {
+    margin-left: 50px;
+}
+
+.blank {
+    flex: 1;
+}
+
+
+/* .result-title{
+	display: table-cell;
+vertical-align: bottom;
+} */
+
+.group-button {
+    margin-right:0px !important;
+}
+
+.panel-heading {
+    cursor: pointer;
+    width:100%;
+}
+
+#grid {
+		width: 100%;
+	height: 100%;
+}
+.page_head {
+	display: flex;
+	position: relative;
+}
+.page{
+  width: 130px;
+  height: 20px;
+  color:#4682B4;
+  border:none;
+  background: #E6FBDB;
+}
+.page-next {
+	width: 65%;
+}
+.page-box{
+	margin-left:50%;
+	margin-right:5%;
+}
+.page-box a,.page-box span{
+	margin-left:15px;
+}
+.page-info{
+	position: absolute;
+	right:0;
+}
+.page-back{
+	width:10%;
+}
+.disableHref{ 
+    cursor:default; 
+    color:#E5E0E0; 
+    text-decoration:none; 
+}
+.btn-slide{
+	width:80px;
+}
+ .panel-body{
+	 justify-content:flex-end;
+ }

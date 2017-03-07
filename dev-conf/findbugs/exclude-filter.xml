@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+  <Match>
+    <Package name="~jp\.co\.broadleaf\.[a-z]+\.test\..*"/>
+  </Match>
+  <Match>
+    <Package name="~jp\.co\.broadleaf\.[a-z]+\.it\..*"/>
+  </Match>
+  <Match>
+    <Bug pattern="EI_EXPOSE_REP, EI_EXPOSE_REP2"/>
+  </Match>
+</FindBugsFilter>

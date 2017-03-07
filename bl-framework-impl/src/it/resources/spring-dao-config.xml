@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:database.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="dataSourceMaker" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${database.driverClass:#{null}}" />
+		<property name="jdbcUrl" value="${database.jdbcUrlMaker:#{null}}" />
+		<property name="user" value="${database.userMaker:#{null}}" />
+		<property name="password" value="${database.passwordMaker:#{null}}" />
+		<property name="acquireIncrement" value="${database.acquireIncrement:3}" />
+		<property name="acquireRetryAttempts" value="${database.acquireRetryAttempts:30}" />
+		<property name="acquireRetryDelay" value="${database.acquireRetryDelay:1000}" />
+		<property name="checkoutTimeout" value="${database.checkoutTimeout:0}" />
+		<property name="connectionCustomizerClassName" value="jp.co.broadleaf.framework.persistence.jdbc.c3p0.ConnectionFixCustomizer" />
+		<property name="initialPoolSize" value="${database.initialPoolSize:3}" />
+		<property name="minPoolSize" value="${database.minPoolSize:3}" />
+		<property name="maxPoolSize" value="${database.maxPoolSize:15}" />
+		<property name="maxConnectionAge" value="${database.maxConnectionAge:0}" />
+		<property name="maxIdleTime" value="${database.maxIdleTime:0}" />
+		<property name="maxStatements" value="${database.maxStatements:0}" />
+		<property name="maxStatementsPerConnection" value="${database.maxStatementsPerConnection:0}" />
+		<property name="idleConnectionTestPeriod" value="${database.idleConnectionTestPeriod:0}" />
+		<property name="testConnectionOnCheckin" value="${database.testConnectionOnCheckin:false}" />
+		<property name="testConnectionOnCheckout" value="${database.testConnectionOnCheckout:false}" />
+		<property name="preferredTestQuery" value="${database.preferredTestQuery:#{null}}" />
+	</bean>
+	<bean id="dataSourceCommon" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${database.driverClass:#{null}}" />
+		<property name="jdbcUrl" value="${database.jdbcUrlCommon:#{null}}" />
+		<property name="user" value="${database.userCommon:#{null}}" />
+		<property name="password" value="${database.passwordCommon:#{null}}" />
+		<property name="acquireIncrement" value="${database.acquireIncrement:3}" />
+		<property name="acquireRetryAttempts" value="${database.acquireRetryAttempts:30}" />
+		<property name="acquireRetryDelay" value="${database.acquireRetryDelay:1000}" />
+		<property name="checkoutTimeout" value="${database.checkoutTimeout:0}" />
+		<property name="connectionCustomizerClassName" value="jp.co.broadleaf.framework.persistence.jdbc.c3p0.ConnectionFixCustomizer" />
+		<property name="initialPoolSize" value="${database.initialPoolSize:3}" />
+		<property name="minPoolSize" value="${database.minPoolSize:3}" />
+		<property name="maxPoolSize" value="${database.maxPoolSize:15}" />
+		<property name="maxConnectionAge" value="${database.maxConnectionAge:0}" />
+		<property name="maxIdleTime" value="${database.maxIdleTime:0}" />
+		<property name="maxStatements" value="${database.maxStatements:0}" />
+		<property name="maxStatementsPerConnection" value="${database.maxStatementsPerConnection:0}" />
+		<property name="idleConnectionTestPeriod" value="${database.idleConnectionTestPeriod:0}" />
+		<property name="testConnectionOnCheckin" value="${database.testConnectionOnCheckin:false}" />
+		<property name="testConnectionOnCheckout" value="${database.testConnectionOnCheckout:false}" />
+		<property name="preferredTestQuery" value="${database.preferredTestQuery:#{null}}" />
+	</bean>
+	<bean id="dataSourceBL" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${database.driverClass:#{null}}" />
+		<property name="jdbcUrl" value="${database.jdbcUrlBL:#{null}}" />
+		<property name="user" value="${database.userBL:#{null}}" />
+		<property name="password" value="${database.passwordBL:#{null}}" />
+		<property name="acquireIncrement" value="${database.acquireIncrement:3}" />
+		<property name="acquireRetryAttempts" value="${database.acquireRetryAttempts:30}" />
+		<property name="acquireRetryDelay" value="${database.acquireRetryDelay:1000}" />
+		<property name="checkoutTimeout" value="${database.checkoutTimeout:0}" />
+		<property name="connectionCustomizerClassName" value="jp.co.broadleaf.framework.persistence.jdbc.c3p0.ConnectionFixCustomizer" />
+		<property name="initialPoolSize" value="${database.initialPoolSize:3}" />
+		<property name="minPoolSize" value="${database.minPoolSize:3}" />
+		<property name="maxPoolSize" value="${database.maxPoolSize:15}" />
+		<property name="maxConnectionAge" value="${database.maxConnectionAge:0}" />
+		<property name="maxIdleTime" value="${database.maxIdleTime:0}" />
+		<property name="maxStatements" value="${database.maxStatements:0}" />
+		<property name="maxStatementsPerConnection" value="${database.maxStatementsPerConnection:0}" />
+		<property name="idleConnectionTestPeriod" value="${database.idleConnectionTestPeriod:0}" />
+		<property name="testConnectionOnCheckin" value="${database.testConnectionOnCheckin:false}" />
+		<property name="testConnectionOnCheckout" value="${database.testConnectionOnCheckout:false}" />
+		<property name="preferredTestQuery" value="${database.preferredTestQuery:#{null}}" />
+	</bean>
+	<bean id="jdbcTemplateMaker" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSourceMaker" />
+	</bean>
+	<bean id="jdbcTemplateCommon" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSourceCommon" />
+	</bean>
+	<bean id="jdbcTemplateBL" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSourceBL" />
+	</bean>
+
+	<bean id="entityNameResolver" class="jp.co.broadleaf.framework.domain.entity.DefaultEntityNameResolver">
+	</bean>
+
+	<bean name="rdbTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSourceMaker" />
+	</bean>
+
+	<bean class="jp.co.broadleaf.framework.persistence.jdbc.JdbcDomainEntityManager">
+		<property name="entityNameResolver" ref="entityNameResolver" />
+		<property name="jdbcTemplateMaker" ref="jdbcTemplateMaker" />
+		<property name="jdbcTemplateCommon" ref="jdbcTemplateCommon" />
+		<property name="jdbcTemplateBL" ref="jdbcTemplateBL" />
+	</bean>
+
+</beans>

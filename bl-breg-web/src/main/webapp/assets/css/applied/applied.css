@@ -1,0 +1,69 @@
+.header {
+    background-color: #fff;
+}
+
+.main {
+ 
+    text-align: center;
+    background-color: #E6FBDB; 
+}
+
+.table{
+	margin-top:3%;
+    font-size: 17px;
+}
+.table-style {
+    width: 100%;
+    height: 50%;
+}
+
+.table-size {
+    padding: 0px;
+    white-space: nowrap;
+}
+
+thead {
+    background-color: #248810;
+    color: white;
+    
+}
+.table>tbody>tr>td{
+    
+    height: 50px;
+    vertical-align: middle;
+}
+.table>tr{
+    border: 1px solid #DDDDDD;
+}
+
+.value {
+    font-size: 17px;
+    background-color: #FFFFFF;
+    color: #111;
+    width: 130px;
+    vertical-align: middle;
+	text-align:center;
+}
+.tab-title{
+  border-bottom: none;
+  padding: 8px 10px;
+  background-color: #009240;
+  color: #FFFFFF;
+  width: 50%;
+  text-align:center;
+}
+.tab {
+  border-bottom: none;
+  padding: 8px 10px;
+  background-color: white;
+  color: black;
+  width: 50%;
+  text-align:center;
+}
+.div-textarea{
+ margin-top: 3%;
+ margin-bottom: 3%;
+}
+.div-text{
+ margin-top: 10%;
+}

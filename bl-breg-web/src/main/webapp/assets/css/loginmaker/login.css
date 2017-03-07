@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/**
+ * ログイン定義ファイル
+ *
+ * create : 2017/02/08
+ */
+.checkboxarea {
+	text-align: center;
+	margin: 0 0 6px 0;
+}
+
+.otherarea {
+	text-align: center;
+}

@@ -1,0 +1,155 @@
+.bl-btn {
+  background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #CDCDCD 100%);
+  background-image: -o-linear-gradient(top, #FFFFFF 0%, #CDCDCD 100%);
+  background-image: linear-gradient(to bottom, #FFFFFF 0%, #CDCDCD 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffcdcdcd', GradientType=0);
+  border-color: #BABABA;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  color: #212E33;
+  cursor: pointer;
+}
+.bl-btn:focus {
+  outline-color: #269BFF;
+}
+.bl-btn:hover,
+.bl-btn:focus {
+  background-image: -webkit-linear-gradient(top, #e6e6e6 0%, #c0c0c0 100%);
+  background-image: -o-linear-gradient(top, #e6e6e6 0%, #c0c0c0 100%);
+  background-image: linear-gradient(to bottom, #e6e6e6 0%, #c0c0c0 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe6e6e6', endColorstr='#ffc0c0c0', GradientType=0);
+  border-color: #AAAAAA;
+  color: #333333;
+}
+.bl-btn.active,
+.bl-btn:active {
+  background: #c0c0c0;
+  border-color: #909090;
+  color: #333333;
+}
+.bl-btn.disabled,
+.bl-btn.disabled:hover,
+.bl-btn.disabled:focus,
+.bl-btn.disabled:active,
+.bl-btn[disabled],
+.bl-btn[disabled]:hover,
+.bl-btn[disabled]:focus,
+.bl-btn[disabled]:active {
+  background-image: -webkit-linear-gradient(top, #FAFAFA 0%, #EEEEEE 100%);
+  background-image: -o-linear-gradient(top, #FAFAFA 0%, #EEEEEE 100%);
+  background-image: linear-gradient(to bottom, #FAFAFA 0%, #EEEEEE 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffafafa', endColorstr='#ffeeeeee', GradientType=0);
+  border-color: #BABABA;
+  color: #777777;
+  opacity: 0.8;
+}
+
+.bl-btn-panel {
+  margin: 0 auto;
+  color: #009240;
+  background-color: #FFFFFF;
+  border: 2px solid #009240;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  width: 120px;
+}
+.bl-btn-panel:hover {
+  color: #FFFFFF;
+  background-color: #009240;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.bl-btn-panel:focus {
+  color: #FFFFFF;
+  background-color: #009240;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.bl-btn-panel.active,
+.bl-btn-panel:active {
+  color: #FFFFFF;
+  background-color: #009240;
+}
+.bl-btn-panel.disabled,
+.bl-btn-panel.disabled:hover,
+.bl-btn-panel.disabled:focus,
+.bl-btn-panel.disabled:active,
+.bl-btn-panel[disabled],
+.bl-btn-panel[disabled]:hover,
+.bl-btn-panel[disabled]:focus,
+.bl-btn-panel[disabled]:active {
+  background-color: #FFFFFF;
+  border: 2px solid #009240;
+  color: #009240;
+}
+
+ .bl-btn-wiz-prev {
+  margin: 0 auto;
+  color: #009240;
+  background-color: #FFFFFF;
+  border: 2px solid #009240;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  width: 60px;
+  position: relative;
+  width: 120px;
+}
+
+.bl-btn-wiz-prev:hover {
+  color: #FFFFFF;
+  background-color: #009240;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.bl-btn-wiz-prev:focus {
+  color: #FFFFFF;
+  background-color: #009240;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.bl-btn-wiz-prev.active,
+.bl-btn-wiz-prev:active {
+  color: #FFFFFF;
+  background-color: #009240;
+}
+.bl-btn-wiz-prev .glyphicon {
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+}
+.bl-btn-wiz-prev .glyphicon {
+  left: 10px;
+}
+/* リンクタイプボタン */
+.btn-link {
+  font-size: 12px;
+  text-decoration: underline;
+}
+.btn-link:hover {
+  text-decoration: none;
+}
+.btn-link.disabled,
+.btn-link.disabled:hover,
+.btn-link.disabled:focus,
+.btn-link.disabled:active,
+.btn-link[disabled],
+.btn-link[disabled]:hover,
+.btn-link[disabled]:focus,
+.btn-link[disabled]:active {
+  color: #777777;
+  opacity: 0.8;
+  text-decoration: underline;
+}

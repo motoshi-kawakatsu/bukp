@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/**
+ * ログイン送信完了定義ファイル
+ *
+ * create : 2017/02/08
+ */
+.send {
+	text-align: center;
+}
+
+.fa {
+	font-size: 100px;
+	margin: 30px 0 10px 0;
+	color: #ccc;
+}

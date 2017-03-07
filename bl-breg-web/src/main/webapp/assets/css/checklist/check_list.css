@@ -1,0 +1,56 @@
+#item, #set, #union{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.backbg {
+	background-color: #E0E0E0;
+	color: black;
+}
+
+.button {
+	text-align:center;
+}
+
+p {
+	color: #FF0000;
+}
+
+.bl-btn-5 {
+	margin-top: 10px;
+	width:130px;
+}
+
+.page_head {
+	display: flex;
+	position: relative;
+}
+.page{
+  width: 130px;
+  height: 20px;
+  color:#4682B4;
+  border:none;
+  background: #E6FBDB;
+}
+.page-next {
+	width: 65%;
+}
+.page-box{
+	margin-left:50%;
+	margin-right:5%;
+}
+.page-box a,.page-box span{
+	margin-left:15px;
+}
+.page-info{
+	position: absolute;
+	right:0;
+}
+.page-back{
+	width:10%;
+	margin-top:2%;
+}
+.tab-content{
+	height:100%
+}

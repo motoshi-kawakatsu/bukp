@@ -1,0 +1,131 @@
+h2 {
+  margin: 0;
+}
+
+.panel-heading-down {
+  padding-top: 0;
+  padding-bottom: 7px;
+}
+
+.first-column,
+.second-column {
+  width: 50%;
+}
+
+.first-column .input-group-addon {
+  width: 120px;
+  min-width: 120px;
+}
+
+.second-column .input-group-addon {
+  width: 120px;
+  min-width: 120px;
+}
+
+.header {
+	width: 50%;
+}
+.container-center {
+  justify-content: center;
+}
+
+.bl-flex-row {
+  padding: 0 15px 0 15px;
+  width: 100%;
+}
+
+.list-group {
+  padding: 0 15px 0 15px;
+}
+
+.panel-body {
+  padding-top: 0;
+}
+
+.list-body {
+  width: 50%;
+}
+
+.item-label {
+  display: flex;
+  -webkit-flex-direction: row;
+}
+
+span.header {
+  padding:6px 12px;
+  background: #009240;
+  font-size: 11pt;
+  color: white;
+}
+
+.select-list {
+  margin: 0 auto;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid ;
+}
+
+a:nth-child(even) {
+  background: #d1eec5;
+}
+
+a:nth-child(odd) {
+  background: #e6fbdb;
+}
+
+a.list-group-item:hover {
+  background: #bfe4b0;
+}
+
+.selected-item {
+  background: #add8e6 !important;
+}
+
+.foot-button {
+  position: relative;
+  text-align:center;
+ 
+}
+
+.bl-btn-4 {
+  width: 130px;
+}
+
+.decide {
+  margin-right: 9px;
+}
+ul {
+	padding: 0;
+}
+
+
+div.textareared {
+	width: 100%;
+    border: 2px solid #f4a2a2;
+    background-color: #ffeeee;
+    padding: 10px !important;
+    margin: 0 0 10px 0;
+    text-align: left;
+    font-size: 13px;
+}
+div.textareared ul {
+    padding: 0;
+    margin: 0 !important;
+    list-style-position: inside;
+}
+div.textareared ul li.icon {
+    text-align: center !important;
+    list-style: none !important;
+    padding: 0 0 5px 0 !important;
+}
+div.textareared ul li {
+  text-align: center;
+}
+span.red {
+	color: #FF0000;
+}
+
+.meg {
+	display: none;
+}

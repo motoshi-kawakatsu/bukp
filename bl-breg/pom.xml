@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<properties>
+    	<app.version>1.0.0</app.version>
+	</properties>
+	<parent>
+		<groupId>jp.co.broadleaf</groupId>
+		<artifactId>bl-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>bl-breg</artifactId>
+	<version>${app.version}</version>
+
+	<dependencies>
+		<dependency>
+			<groupId>jp.co.broadleaf</groupId>
+			<artifactId>bl-framework</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>jp.co.broadleaf</groupId>
+			<artifactId>bl-framework-impl</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>jp.co.broadleaf</groupId>
+			<artifactId>bl-common</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+	</dependencies>
+</project>

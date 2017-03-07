@@ -1,0 +1,118 @@
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.history {
+  background-color: #00ffff !important;
+}
+
+.page_head {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.all-counts {
+  width: 10%;
+}
+
+.page-number {
+  text-align: right;
+  margin-left: 22%;
+  width: 50%;
+}
+
+.page-number a {
+  margin-left: 15px;
+}
+
+.page-number span {
+  margin-left: 15px;
+}
+
+.page-info {
+  width: 220px;
+  right: 0;
+  position: absolute;
+}
+
+.table-mouseover {
+  background: #fcfd9c;
+}
+
+.table-checked {
+  background: #bfe4b0;
+}
+
+.button {
+  text-align: center;
+}
+
+.import_checklist {
+  text-align: right;
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+
+.panel-body .empty {
+  width: 20%;
+  min-width: 0;
+}
+
+.glyphicon-menu-left {
+  position: absolute;
+  top: 92.5%;
+  left: 130px;
+}
+
+.glyphicon-menu-right {
+  position: absolute;
+  top: 92.5%;
+  right: -80px;
+}
+
+#item, #set, #union {
+  width: 100%;
+  height: 70%;
+  text-align: center;
+}
+
+.backbg {
+  background-color: #E0E0E0;
+  color: black;
+}
+
+.bl-btn-5 {
+  width: 130px;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.apply-again {
+  bottom: 15px;
+  min-height: 40px;
+  position: relative;
+}
+
+.error-msg {
+  color: red;
+}
+
+#info {
+  text-align: center;
+  background-color: #009240;
+}
+
+#grid {
+  width: 100%;
+  height: 100%;
+}
+
+.tab-content {
+  height: 100%
+}

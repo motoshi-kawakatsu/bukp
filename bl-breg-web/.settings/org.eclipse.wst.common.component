@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="breg">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="bl-breg-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/bl-breg/bl-breg">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="bl-framework-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/bl-framework/bl-framework">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="bl-common-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/bl-common/bl-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="bl-breg-infra-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/bl-breg-infra/bl-breg-infra">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="bl-common-infra-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/bl-common-infra/bl-common-infra">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="bl-framework-impl-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/bl-framework-impl/bl-framework-impl">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="breg"/>
+        <property name="java-output-path" value="/bl-breg-web/target/classes"/>
+    </wb-module>
+</project-modules>

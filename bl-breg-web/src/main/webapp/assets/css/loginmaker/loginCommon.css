@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+/**
+ * ログイン共通定義ファイル
+ *
+ * create : 2017/02/16
+ */
+#webwrapper {
+	width: 40%;
+	margin: 0 30% 0 30%;
+	position: relative;
+	height: auto !important;
+	height: 100%;
+	min-heigth: 100%;
+	padding-bottom: 4em;
+}
+
+div.textareared {
+	border: 2px solid #f4a2a2;
+	background-color: #ffeeee;
+	padding: 10px !important;
+	margin: 0 0 10px 0;
+	text-align: left;
+	font-size: 13px;
+}
+
+div.textareared ul {
+	padding: 0;
+	margin: 0 !important;
+	list-style-position: inside;
+}
+
+div.textareared ul li.icon {
+	text-align: center !important;
+	list-style: none !important;
+	padding: 0 0 5px 0 !important;
+}
+
+.red {
+	color: #e93030 !important;
+}
+
+#webwrapper ul {
+	margin-bottom: 26px;
+	padding: 0;
+}
+
+#webwrapper p {
+	word-wrap: break-word;
+	margin: 0 0 10px 0;
+	padding: 0;
+	font-size: 14px;
+	color: #666;
+}
+
+input[type=text] {
+	width: 98%;
+	height: 34px;
+	margin-top: 6px;
+	padding: 5px 0 5px 10px;
+	font-size: 14px;
+	ime-mode: active;
+}
+
+input[type=text]:focus {
+	border: solid 1px #20b2aa;
+}
+
+input[type=text], select {
+	outline: none;
+}
+
+input[type=password] {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), 0 0 2px
+		rgba(0, 0, 0, 0.3);
+	width: 98%;
+	height: 34px;
+	margin-top: 6px;
+	padding: 5px 0 5px 10px;
+	font-size: 14px;
+	ime-mode: disabled;
+}
+
+input[type=password]:focus {
+	border: solid 1px #20b2aa;
+}
+
+input[type=password], select {
+	outline: none;
+}
+
+input[type=checkbox] {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border: #a9a9a9 1px solid;
+	-moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), 0 0 2px
+		rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), 0 0 2px
+		rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.3);
+	width: 90%;
+	height: 25px;
+	padding: 5px 10px 5px 10px;
+	font-size: 14px;
+}
+
+input[type=checkbox]:focus {
+	border: solid 1px #20b2aa;
+}
+
+input[type=checkbox], select {
+	outline: none;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+label.checkbox {
+	font-size: 15px;
+	position: relative;
+	display: inline-block;
+	padding: 3px 3px 3px 22px;
+	cursor: pointer;
+}
+
+label.checkbox::before {
+	position: absolute;
+	content: '';
+	top: 50%;
+	left: 0;
+	width: 14px;
+	height: 14px;
+	margin-top: -8px;
+	background: #fff;
+	border: 1px solid #ccc;
+}
+
+input[type="checkbox"]:checked+label.checkbox::after {
+	position: absolute;
+	content: '';
+	top: 5px;
+	left: 3px;
+	width: 13px;
+	height: 5px;
+	border-left: 2px solid #3498db;
+	border-bottom: 2px solid #3498db;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.bl-btn-4 {
+	margin: 20px auto 0 auto;
+	width: 110px;
+}
+
+a.normal {
+	font-size: 14px;
+	color: #2c65bc;
+}
+
+div.textlink {
+	padding: 10px 0 15px 0;
+}
+
+.rightspace4 {
+	margin: 0 4px 0 0;
+}
+
+.leftspace6 {
+	margin: 0 0 0 6px;
+	font-size: 17px;
+}
+
+img.msg_info_display {
+	display: none;
+}
+
+.txtarea {
+	border: 1px solid #E6FBDB;
+	padding: 0 20px 20px 20px !important;
+	text-align: center;
+}
+
+h2 {
+	font-weight: bold;
+}
+
+.txtarea h2 {
+	margin: 30px 0 10px 0;
+	text-align: left;
+	padding: 2px 0 3px 0;
+	font-size: 18px;
+	color: #444;
+}
+
+label.normal {
+	font-size: 14px;
+	color: #444;
+	padding: 18px 0 0 0 !important;
+	display: block;
+	margin: 0 0 6px 0;
+}
+
+.star-mark {
+	color: red;
+}
+
+.inputarea {
+	text-align: left;
+}

@@ -1,0 +1,126 @@
+.layer-ext-skin .layui-layer-title {
+   height: 42px;
+   line-height: 42px;
+   font-weight: bold;
+   text-align: center;
+   font-size: 100%;
+   border: 0;
+   size: 24px;
+   font-family: MS Gothic;
+   background: #FFFFFF;
+   padding: 0 20px 0 20px;
+}
+
+.layer-ext-skin .layui-layer-btn {
+  background-color: #E6FBDB;
+  text-align: center;
+  
+
+}
+
+.layer-ext-skin .layui-layer-btn0 {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  margin: 0 auto;
+  color: #009240;
+  background-color: #FFFFFF;
+  border: 2px solid #009240;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  width: 150px;
+  height: 36px;
+  margin-right: 7.5px;
+}
+.layer-ext-skin .layui-layer-btn0:focus {
+  color: #FFFFFF;
+  background-color: #009240;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.layer-ext-skin .layui-layer-btn0:hover {
+  color: #FFFFFF;
+  background-color: #009240;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.layer-ext-skin .layui-layer-btn0.active,
+.layer-ext-skin .layui-layer-btn0:active {
+  color: #FFFFFF;
+  background-color: #009240;
+}
+
+
+.layer-ext-skin .layui-layer-btn1 {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  margin: 0 auto;
+  color: #009240;
+  background-color: #FFFFFF;
+  border: 2px solid #009240;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  width: 150px;
+  height: 36px;
+  margin-left: 7.5px;
+}
+.layer-ext-skin .layui-layer-btn1:focus {
+  color: #FFFFFF;
+  background-color: #009240;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.layer-ext-skin .layui-layer-btn1:hover {
+  color: #FFFFFF;
+  background-color: #009240;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.layer-ext-skin .layui-layer-btn1.active,
+.layer-ext-skin .layui-layer-btn1:active {
+  color: #FFFFFF;
+  background-color: #009240;
+}
+
+

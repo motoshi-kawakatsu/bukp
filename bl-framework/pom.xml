@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<properties>
+    	<app.version>1.0.0</app.version>
+	</properties>
+	<parent>
+		<groupId>jp.co.broadleaf</groupId>
+		<artifactId>bl-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>bl-framework</artifactId>
+	<version>${app.version}</version>
+
+	<dependencies>
+
+		<!-- Apache Commons-BeanUtils -->
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+		</dependency>
+
+		<!-- Apache Commons-Validator -->
+		<dependency>
+			<groupId>commons-validator</groupId>
+			<artifactId>commons-validator</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-beanutils</groupId>
+					<artifactId>commons-beanutils</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>commons-digester</groupId>
+					<artifactId>commons-digester</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- Easymock Framework -->
+		<dependency>
+			<groupId>org.easymock</groupId>
+			<artifactId>easymock</artifactId>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+</project>
